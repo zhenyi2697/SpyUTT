@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC780F56165FEA8300D5FCB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F55165FEA8300D5FCB2 /* UIKit.framework */; };
+		BC780F58165FEA8300D5FCB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F57165FEA8300D5FCB2 /* Foundation.framework */; };
+		BC780F5A165FEA8300D5FCB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F59165FEA8300D5FCB2 /* CoreGraphics.framework */; };
+		BC780F60165FEA8300D5FCB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC780F5E165FEA8300D5FCB2 /* InfoPlist.strings */; };
+		BC780F62165FEA8300D5FCB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780F61165FEA8300D5FCB2 /* main.m */; };
+		BC780F66165FEA8300D5FCB2 /* SUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780F65165FEA8300D5FCB2 /* SUAppDelegate.m */; };
+		BC780F68165FEA8300D5FCB2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BC780F67165FEA8300D5FCB2 /* Default.png */; };
+		BC780F6A165FEA8400D5FCB2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC780F69165FEA8400D5FCB2 /* Default@2x.png */; };
+		BC780F6C165FEA8400D5FCB2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC780F6B165FEA8400D5FCB2 /* Default-568h@2x.png */; };
+		BC780F6F165FEA8400D5FCB2 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC780F6D165FEA8400D5FCB2 /* MainStoryboard_iPhone.storyboard */; };
+		BC780F72165FEA8400D5FCB2 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC780F70165FEA8400D5FCB2 /* MainStoryboard_iPad.storyboard */; };
+		BC780F7D165FEAF000D5FCB2 /* SULauncherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780F7C165FEAF000D5FCB2 /* SULauncherViewController.m */; };
+		BC780FC816601FE400D5FCB2 /* ABDContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780FBE16601FE400D5FCB2 /* ABDContactController.m */; };
+		BC780FC916601FE400D5FCB2 /* ABDContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780FC016601FE400D5FCB2 /* ABDContentCell.m */; };
+		BC780FCA16601FE400D5FCB2 /* ABDDetailSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780FC216601FE400D5FCB2 /* ABDDetailSubView.m */; };
+		BC780FCB16601FE400D5FCB2 /* ABDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780FC416601FE400D5FCB2 /* ABDMasterViewController.m */; };
+		BC780FCC16601FE400D5FCB2 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = BC780FC516601FE400D5FCB2 /* background.png */; };
+		BC780FCD16601FE400D5FCB2 /* cell.tiff in Resources */ = {isa = PBXBuildFile; fileRef = BC780FC616601FE400D5FCB2 /* cell.tiff */; };
+		BC780FCE16601FE400D5FCB2 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = BC780FC716601FE400D5FCB2 /* up.png */; };
+		BC780FD41660216900D5FCB2 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780FD31660216900D5FCB2 /* AddressBook.framework */; };
+		BC780FDB1660235900D5FCB2 /* SpyDevice.png in Resources */ = {isa = PBXBuildFile; fileRef = BC780FDA1660235900D5FCB2 /* SpyDevice.png */; };
+		BC780FDE1660236D00D5FCB2 /* SDDeviceInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780FDD1660236D00D5FCB2 /* SDDeviceInfoTableViewController.m */; };
+		BC780FE01660243500D5FCB2 /* SpyContact.png in Resources */ = {isa = PBXBuildFile; fileRef = BC780FDF1660243500D5FCB2 /* SpyContact.png */; };
+		BC780FE4166024B300D5FCB2 /* SpyCal.png in Resources */ = {isa = PBXBuildFile; fileRef = BC780FE3166024B200D5FCB2 /* SpyCal.png */; };
+		BC780FE6166024CA00D5FCB2 /* SpyRem.png in Resources */ = {isa = PBXBuildFile; fileRef = BC780FE5166024CA00D5FCB2 /* SpyRem.png */; };
+		BC780FEA1660266100D5FCB2 /* SpyPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = BC780FE91660266100D5FCB2 /* SpyPhoto.png */; };
+		BC780FF01660269400D5FCB2 /* SpyGeo.png in Resources */ = {isa = PBXBuildFile; fileRef = BC780FEF1660269400D5FCB2 /* SpyGeo.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BC780F51165FEA8300D5FCB2 /* SpyUTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpyUTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC780F55165FEA8300D5FCB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BC780F57165FEA8300D5FCB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BC780F59165FEA8300D5FCB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BC780F5D165FEA8300D5FCB2 /* SpyUTT-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpyUTT-Info.plist"; sourceTree = "<group>"; };
+		BC780F5F165FEA8300D5FCB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BC780F61165FEA8300D5FCB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC780F63165FEA8300D5FCB2 /* SpyUTT-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpyUTT-Prefix.pch"; sourceTree = "<group>"; };
+		BC780F64165FEA8300D5FCB2 /* SUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUAppDelegate.h; sourceTree = "<group>"; };
+		BC780F65165FEA8300D5FCB2 /* SUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUAppDelegate.m; sourceTree = "<group>"; };
+		BC780F67165FEA8300D5FCB2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BC780F69165FEA8400D5FCB2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		BC780F6B165FEA8400D5FCB2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BC780F6E165FEA8400D5FCB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		BC780F71165FEA8400D5FCB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		BC780F7B165FEAF000D5FCB2 /* SULauncherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SULauncherViewController.h; sourceTree = "<group>"; };
+		BC780F7C165FEAF000D5FCB2 /* SULauncherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SULauncherViewController.m; sourceTree = "<group>"; };
+		BC780FBD16601FE400D5FCB2 /* ABDContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABDContactController.h; sourceTree = "<group>"; };
+		BC780FBE16601FE400D5FCB2 /* ABDContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDContactController.m; sourceTree = "<group>"; };
+		BC780FBF16601FE400D5FCB2 /* ABDContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABDContentCell.h; sourceTree = "<group>"; };
+		BC780FC016601FE400D5FCB2 /* ABDContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDContentCell.m; sourceTree = "<group>"; };
+		BC780FC116601FE400D5FCB2 /* ABDDetailSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABDDetailSubView.h; sourceTree = "<group>"; };
+		BC780FC216601FE400D5FCB2 /* ABDDetailSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDDetailSubView.m; sourceTree = "<group>"; };
+		BC780FC316601FE400D5FCB2 /* ABDMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABDMasterViewController.h; sourceTree = "<group>"; };
+		BC780FC416601FE400D5FCB2 /* ABDMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDMasterViewController.m; sourceTree = "<group>"; };
+		BC780FC516601FE400D5FCB2 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		BC780FC616601FE400D5FCB2 /* cell.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = cell.tiff; sourceTree = "<group>"; };
+		BC780FC716601FE400D5FCB2 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		BC780FD31660216900D5FCB2 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		BC780FDA1660235900D5FCB2 /* SpyDevice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpyDevice.png; sourceTree = "<group>"; };
+		BC780FDC1660236D00D5FCB2 /* SDDeviceInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDeviceInfoTableViewController.h; sourceTree = "<group>"; };
+		BC780FDD1660236D00D5FCB2 /* SDDeviceInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDeviceInfoTableViewController.m; sourceTree = "<group>"; };
+		BC780FDF1660243500D5FCB2 /* SpyContact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpyContact.png; sourceTree = "<group>"; };
+		BC780FE3166024B200D5FCB2 /* SpyCal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpyCal.png; sourceTree = "<group>"; };
+		BC780FE5166024CA00D5FCB2 /* SpyRem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpyRem.png; sourceTree = "<group>"; };
+		BC780FE91660266100D5FCB2 /* SpyPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpyPhoto.png; sourceTree = "<group>"; };
+		BC780FEF1660269400D5FCB2 /* SpyGeo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpyGeo.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC780F4E165FEA8300D5FCB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC780FD41660216900D5FCB2 /* AddressBook.framework in Frameworks */,
+				BC780F56165FEA8300D5FCB2 /* UIKit.framework in Frameworks */,
+				BC780F58165FEA8300D5FCB2 /* Foundation.framework in Frameworks */,
+				BC780F5A165FEA8300D5FCB2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC780F46165FEA8300D5FCB2 = {
+			isa = PBXGroup;
+			children = (
+				BC780FD31660216900D5FCB2 /* AddressBook.framework */,
+				BC780F5B165FEA8300D5FCB2 /* SpyUTT */,
+				BC780F54165FEA8300D5FCB2 /* Frameworks */,
+				BC780F52165FEA8300D5FCB2 /* Products */,
+				BC780F70165FEA8400D5FCB2 /* MainStoryboard_iPad.storyboard */,
+			);
+			sourceTree = "<group>";
+		};
+		BC780F52165FEA8300D5FCB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC780F51165FEA8300D5FCB2 /* SpyUTT.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC780F54165FEA8300D5FCB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC780F55165FEA8300D5FCB2 /* UIKit.framework */,
+				BC780F57165FEA8300D5FCB2 /* Foundation.framework */,
+				BC780F59165FEA8300D5FCB2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC780F5B165FEA8300D5FCB2 /* SpyUTT */ = {
+			isa = PBXGroup;
+			children = (
+				BC780FE81660261500D5FCB2 /* SpyGeo */,
+				BC780FE71660260F00D5FCB2 /* SpyPhoto */,
+				BC780FE21660249F00D5FCB2 /* SpyRem */,
+				BC780FE11660249700D5FCB2 /* SpyCal */,
+				BC780FD91660233900D5FCB2 /* SpyDevice */,
+				BC780FBB16601F5300D5FCB2 /* SpyContact */,
+				BC780F6D165FEA8400D5FCB2 /* MainStoryboard_iPhone.storyboard */,
+				BC780F7B165FEAF000D5FCB2 /* SULauncherViewController.h */,
+				BC780F7C165FEAF000D5FCB2 /* SULauncherViewController.m */,
+				BC780F5C165FEA8300D5FCB2 /* Supporting Files */,
+			);
+			path = SpyUTT;
+			sourceTree = "<group>";
+		};
+		BC780F5C165FEA8300D5FCB2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC780F64165FEA8300D5FCB2 /* SUAppDelegate.h */,
+				BC780F65165FEA8300D5FCB2 /* SUAppDelegate.m */,
+				BC780F5D165FEA8300D5FCB2 /* SpyUTT-Info.plist */,
+				BC780F5E165FEA8300D5FCB2 /* InfoPlist.strings */,
+				BC780F61165FEA8300D5FCB2 /* main.m */,
+				BC780F63165FEA8300D5FCB2 /* SpyUTT-Prefix.pch */,
+				BC780F67165FEA8300D5FCB2 /* Default.png */,
+				BC780F69165FEA8400D5FCB2 /* Default@2x.png */,
+				BC780F6B165FEA8400D5FCB2 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC780FBB16601F5300D5FCB2 /* SpyContact */ = {
+			isa = PBXGroup;
+			children = (
+				BC780FDF1660243500D5FCB2 /* SpyContact.png */,
+				BC780FBD16601FE400D5FCB2 /* ABDContactController.h */,
+				BC780FBE16601FE400D5FCB2 /* ABDContactController.m */,
+				BC780FBF16601FE400D5FCB2 /* ABDContentCell.h */,
+				BC780FC016601FE400D5FCB2 /* ABDContentCell.m */,
+				BC780FC116601FE400D5FCB2 /* ABDDetailSubView.h */,
+				BC780FC216601FE400D5FCB2 /* ABDDetailSubView.m */,
+				BC780FC316601FE400D5FCB2 /* ABDMasterViewController.h */,
+				BC780FC416601FE400D5FCB2 /* ABDMasterViewController.m */,
+				BC780FC516601FE400D5FCB2 /* background.png */,
+				BC780FC616601FE400D5FCB2 /* cell.tiff */,
+				BC780FC716601FE400D5FCB2 /* up.png */,
+			);
+			name = SpyContact;
+			sourceTree = "<group>";
+		};
+		BC780FD91660233900D5FCB2 /* SpyDevice */ = {
+			isa = PBXGroup;
+			children = (
+				BC780FDC1660236D00D5FCB2 /* SDDeviceInfoTableViewController.h */,
+				BC780FDD1660236D00D5FCB2 /* SDDeviceInfoTableViewController.m */,
+				BC780FDA1660235900D5FCB2 /* SpyDevice.png */,
+			);
+			name = SpyDevice;
+			sourceTree = "<group>";
+		};
+		BC780FE11660249700D5FCB2 /* SpyCal */ = {
+			isa = PBXGroup;
+			children = (
+				BC780FE3166024B200D5FCB2 /* SpyCal.png */,
+			);
+			name = SpyCal;
+			sourceTree = "<group>";
+		};
+		BC780FE21660249F00D5FCB2 /* SpyRem */ = {
+			isa = PBXGroup;
+			children = (
+				BC780FE5166024CA00D5FCB2 /* SpyRem.png */,
+			);
+			name = SpyRem;
+			sourceTree = "<group>";
+		};
+		BC780FE71660260F00D5FCB2 /* SpyPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				BC780FE91660266100D5FCB2 /* SpyPhoto.png */,
+			);
+			name = SpyPhoto;
+			sourceTree = "<group>";
+		};
+		BC780FE81660261500D5FCB2 /* SpyGeo */ = {
+			isa = PBXGroup;
+			children = (
+				BC780FEF1660269400D5FCB2 /* SpyGeo.png */,
+			);
+			name = SpyGeo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC780F50165FEA8300D5FCB2 /* SpyUTT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC780F78165FEA8400D5FCB2 /* Build configuration list for PBXNativeTarget "SpyUTT" */;
+			buildPhases = (
+				BC780F4D165FEA8300D5FCB2 /* Sources */,
+				BC780F4E165FEA8300D5FCB2 /* Frameworks */,
+				BC780F4F165FEA8300D5FCB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpyUTT;
+			productName = SpyUTT;
+			productReference = BC780F51165FEA8300D5FCB2 /* SpyUTT.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC780F48165FEA8300D5FCB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SU;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Zhenyi Zhang";
+			};
+			buildConfigurationList = BC780F4B165FEA8300D5FCB2 /* Build configuration list for PBXProject "SpyUTT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BC780F46165FEA8300D5FCB2;
+			productRefGroup = BC780F52165FEA8300D5FCB2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC780F50165FEA8300D5FCB2 /* SpyUTT */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC780F4F165FEA8300D5FCB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC780F60165FEA8300D5FCB2 /* InfoPlist.strings in Resources */,
+				BC780F68165FEA8300D5FCB2 /* Default.png in Resources */,
+				BC780F6A165FEA8400D5FCB2 /* Default@2x.png in Resources */,
+				BC780F6C165FEA8400D5FCB2 /* Default-568h@2x.png in Resources */,
+				BC780F6F165FEA8400D5FCB2 /* MainStoryboard_iPhone.storyboard in Resources */,
+				BC780F72165FEA8400D5FCB2 /* MainStoryboard_iPad.storyboard in Resources */,
+				BC780FCC16601FE400D5FCB2 /* background.png in Resources */,
+				BC780FCD16601FE400D5FCB2 /* cell.tiff in Resources */,
+				BC780FCE16601FE400D5FCB2 /* up.png in Resources */,
+				BC780FDB1660235900D5FCB2 /* SpyDevice.png in Resources */,
+				BC780FE01660243500D5FCB2 /* SpyContact.png in Resources */,
+				BC780FE4166024B300D5FCB2 /* SpyCal.png in Resources */,
+				BC780FE6166024CA00D5FCB2 /* SpyRem.png in Resources */,
+				BC780FEA1660266100D5FCB2 /* SpyPhoto.png in Resources */,
+				BC780FF01660269400D5FCB2 /* SpyGeo.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC780F4D165FEA8300D5FCB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC780F62165FEA8300D5FCB2 /* main.m in Sources */,
+				BC780F66165FEA8300D5FCB2 /* SUAppDelegate.m in Sources */,
+				BC780F7D165FEAF000D5FCB2 /* SULauncherViewController.m in Sources */,
+				BC780FC816601FE400D5FCB2 /* ABDContactController.m in Sources */,
+				BC780FC916601FE400D5FCB2 /* ABDContentCell.m in Sources */,
+				BC780FCA16601FE400D5FCB2 /* ABDDetailSubView.m in Sources */,
+				BC780FCB16601FE400D5FCB2 /* ABDMasterViewController.m in Sources */,
+				BC780FDE1660236D00D5FCB2 /* SDDeviceInfoTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BC780F5E165FEA8300D5FCB2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC780F5F165FEA8300D5FCB2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BC780F6D165FEA8400D5FCB2 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC780F6E165FEA8400D5FCB2 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		BC780F70165FEA8400D5FCB2 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC780F71165FEA8400D5FCB2 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			path = SpyUTT;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC780F76165FEA8400D5FCB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC780F77165FEA8400D5FCB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC780F79165FEA8400D5FCB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpyUTT/SpyUTT-Prefix.pch";
+				INFOPLIST_FILE = "SpyUTT/SpyUTT-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BC780F7A165FEA8400D5FCB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpyUTT/SpyUTT-Prefix.pch";
+				INFOPLIST_FILE = "SpyUTT/SpyUTT-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC780F4B165FEA8300D5FCB2 /* Build configuration list for PBXProject "SpyUTT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC780F76165FEA8400D5FCB2 /* Debug */,
+				BC780F77165FEA8400D5FCB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC780F78165FEA8400D5FCB2 /* Build configuration list for PBXNativeTarget "SpyUTT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC780F79165FEA8400D5FCB2 /* Debug */,
+				BC780F7A165FEA8400D5FCB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC780F48165FEA8300D5FCB2 /* Project object */;
+}
