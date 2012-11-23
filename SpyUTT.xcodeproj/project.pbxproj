@@ -54,6 +54,10 @@
 		BC781068166030AB00D5FCB2 /* CalMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781061166030AB00D5FCB2 /* CalMasterViewController.m */; };
 		BC781069166030AB00D5FCB2 /* CalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781063166030AB00D5FCB2 /* CalModel.m */; };
 		BC78106B1660311C00D5FCB2 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC78106A1660311C00D5FCB2 /* EventKit.framework */; };
+		BC781087166034F800D5FCB2 /* RemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781080166034F800D5FCB2 /* RemDetailViewController.m */; };
+		BC781088166034F800D5FCB2 /* RemEventDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781082166034F800D5FCB2 /* RemEventDetailCell.m */; };
+		BC781089166034F800D5FCB2 /* RemMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781084166034F800D5FCB2 /* RemMasterViewController.m */; };
+		BC78108A166034F800D5FCB2 /* RemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781086166034F800D5FCB2 /* RemModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +133,14 @@
 		BC781062166030AB00D5FCB2 /* CalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalModel.h; sourceTree = "<group>"; };
 		BC781063166030AB00D5FCB2 /* CalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalModel.m; sourceTree = "<group>"; };
 		BC78106A1660311C00D5FCB2 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		BC78107F166034F800D5FCB2 /* RemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemDetailViewController.h; sourceTree = "<group>"; };
+		BC781080166034F800D5FCB2 /* RemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemDetailViewController.m; sourceTree = "<group>"; };
+		BC781081166034F800D5FCB2 /* RemEventDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemEventDetailCell.h; sourceTree = "<group>"; };
+		BC781082166034F800D5FCB2 /* RemEventDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemEventDetailCell.m; sourceTree = "<group>"; };
+		BC781083166034F800D5FCB2 /* RemMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemMasterViewController.h; sourceTree = "<group>"; };
+		BC781084166034F800D5FCB2 /* RemMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemMasterViewController.m; sourceTree = "<group>"; };
+		BC781085166034F800D5FCB2 /* RemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemModel.h; sourceTree = "<group>"; };
+		BC781086166034F800D5FCB2 /* RemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +280,14 @@
 		BC780FE21660249F00D5FCB2 /* SpyRem */ = {
 			isa = PBXGroup;
 			children = (
+				BC78107F166034F800D5FCB2 /* RemDetailViewController.h */,
+				BC781080166034F800D5FCB2 /* RemDetailViewController.m */,
+				BC781081166034F800D5FCB2 /* RemEventDetailCell.h */,
+				BC781082166034F800D5FCB2 /* RemEventDetailCell.m */,
+				BC781083166034F800D5FCB2 /* RemMasterViewController.h */,
+				BC781084166034F800D5FCB2 /* RemMasterViewController.m */,
+				BC781085166034F800D5FCB2 /* RemModel.h */,
+				BC781086166034F800D5FCB2 /* RemModel.m */,
 				BC780FE5166024CA00D5FCB2 /* SpyRem.png */,
 			);
 			name = SpyRem;
@@ -409,6 +429,10 @@
 				BC781067166030AB00D5FCB2 /* CalDetailViewController.m in Sources */,
 				BC781068166030AB00D5FCB2 /* CalMasterViewController.m in Sources */,
 				BC781069166030AB00D5FCB2 /* CalModel.m in Sources */,
+				BC781087166034F800D5FCB2 /* RemDetailViewController.m in Sources */,
+				BC781088166034F800D5FCB2 /* RemEventDetailCell.m in Sources */,
+				BC781089166034F800D5FCB2 /* RemMasterViewController.m in Sources */,
+				BC78108A166034F800D5FCB2 /* RemModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

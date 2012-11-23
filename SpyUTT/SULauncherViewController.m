@@ -9,6 +9,8 @@
 #import "SULauncherViewController.h"
 #import "ABDMasterViewController.h"
 #import "ABDContactController.h"
+#import "RemMasterViewController.h"
+#import "RemModel.h"
 
 @interface SULauncherViewController ()
 
@@ -28,6 +30,10 @@
         ABDMasterViewController *contactMasterViewController =  (ABDMasterViewController *)segue.destinationViewController;
         ABDContactController *aDataController = [[ABDContactController alloc] init];
         contactMasterViewController.contactController = aDataController;
+    } else if ([segue.identifier isEqualToString:@"SUShowReminder"]) {
+        RemMasterViewController *remMasterViewController = (RemMasterViewController *)segue.destinationViewController;
+        RemModel *remModel = [[RemModel alloc] init];
+        remMasterViewController.model = remModel;
     }
 }
 
