@@ -139,7 +139,6 @@
 				BC780F5B165FEA8300D5FCB2 /* SpyUTT */,
 				BC780F54165FEA8300D5FCB2 /* Frameworks */,
 				BC780F52165FEA8300D5FCB2 /* Products */,
-				BC780F70165FEA8400D5FCB2 /* MainStoryboard_iPad.storyboard */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +180,7 @@
 		BC780F5C165FEA8300D5FCB2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BC780F70165FEA8400D5FCB2 /* MainStoryboard_iPad.storyboard */,
 				BC780F64165FEA8300D5FCB2 /* SUAppDelegate.h */,
 				BC780F65165FEA8300D5FCB2 /* SUAppDelegate.m */,
 				BC780F5D165FEA8300D5FCB2 /* SpyUTT-Info.plist */,
@@ -397,7 +397,6 @@
 				BC780F71165FEA8400D5FCB2 /* en */,
 			);
 			name = MainStoryboard_iPad.storyboard;
-			path = SpyUTT;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
