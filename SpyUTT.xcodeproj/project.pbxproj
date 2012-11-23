@@ -180,6 +180,8 @@
 		BC780F5C165FEA8300D5FCB2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BC780FC516601FE400D5FCB2 /* background.png */,
+				BC780FC716601FE400D5FCB2 /* up.png */,
 				BC780F70165FEA8400D5FCB2 /* MainStoryboard_iPad.storyboard */,
 				BC780F64165FEA8300D5FCB2 /* SUAppDelegate.h */,
 				BC780F65165FEA8300D5FCB2 /* SUAppDelegate.m */,
@@ -206,9 +208,7 @@
 				BC780FC216601FE400D5FCB2 /* ABDDetailSubView.m */,
 				BC780FC316601FE400D5FCB2 /* ABDMasterViewController.h */,
 				BC780FC416601FE400D5FCB2 /* ABDMasterViewController.m */,
-				BC780FC516601FE400D5FCB2 /* background.png */,
 				BC780FC616601FE400D5FCB2 /* cell.tiff */,
-				BC780FC716601FE400D5FCB2 /* up.png */,
 			);
 			name = SpyContact;
 			sourceTree = "<group>";
