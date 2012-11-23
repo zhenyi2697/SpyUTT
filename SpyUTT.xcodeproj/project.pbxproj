@@ -34,6 +34,19 @@
 		BC780FE6166024CA00D5FCB2 /* SpyRem.png in Resources */ = {isa = PBXBuildFile; fileRef = BC780FE5166024CA00D5FCB2 /* SpyRem.png */; };
 		BC780FEA1660266100D5FCB2 /* SpyPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = BC780FE91660266100D5FCB2 /* SpyPhoto.png */; };
 		BC780FF01660269400D5FCB2 /* SpyGeo.png in Resources */ = {isa = PBXBuildFile; fileRef = BC780FEF1660269400D5FCB2 /* SpyGeo.png */; };
+		BC7810051660290800D5FCB2 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780FF21660290800D5FCB2 /* CoreDataTableViewController.m */; };
+		BC7810061660290800D5FCB2 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780FF41660290800D5FCB2 /* Location.m */; };
+		BC7810071660290800D5FCB2 /* Location+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780FF61660290800D5FCB2 /* Location+Create.m */; };
+		BC7810081660290800D5FCB2 /* SGAddTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780FF81660290800D5FCB2 /* SGAddTrackViewController.m */; };
+		BC7810091660290800D5FCB2 /* SGLocationAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780FFA1660290800D5FCB2 /* SGLocationAnnotation.m */; };
+		BC78100A1660290800D5FCB2 /* SGMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780FFC1660290800D5FCB2 /* SGMapViewController.m */; };
+		BC78100B1660290800D5FCB2 /* SGTrackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC780FFE1660290800D5FCB2 /* SGTrackListViewController.m */; };
+		BC78100C1660290800D5FCB2 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7810001660290800D5FCB2 /* Track.m */; };
+		BC78100D1660290800D5FCB2 /* Track+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7810021660290800D5FCB2 /* Track+Create.m */; };
+		BC78100E1660290800D5FCB2 /* TrackModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC7810031660290800D5FCB2 /* TrackModel.xcdatamodeld */; };
+		BC781010166029A700D5FCB2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC78100F166029A700D5FCB2 /* MapKit.framework */; };
+		BC781012166029AE00D5FCB2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC781011166029AE00D5FCB2 /* CoreLocation.framework */; };
+		BC781014166029B900D5FCB2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC781013166029B900D5FCB2 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +87,28 @@
 		BC780FE5166024CA00D5FCB2 /* SpyRem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpyRem.png; sourceTree = "<group>"; };
 		BC780FE91660266100D5FCB2 /* SpyPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpyPhoto.png; sourceTree = "<group>"; };
 		BC780FEF1660269400D5FCB2 /* SpyGeo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpyGeo.png; sourceTree = "<group>"; };
+		BC780FF11660290800D5FCB2 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		BC780FF21660290800D5FCB2 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		BC780FF31660290800D5FCB2 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		BC780FF41660290800D5FCB2 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		BC780FF51660290800D5FCB2 /* Location+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Location+Create.h"; sourceTree = "<group>"; };
+		BC780FF61660290800D5FCB2 /* Location+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Location+Create.m"; sourceTree = "<group>"; };
+		BC780FF71660290800D5FCB2 /* SGAddTrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAddTrackViewController.h; sourceTree = "<group>"; };
+		BC780FF81660290800D5FCB2 /* SGAddTrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAddTrackViewController.m; sourceTree = "<group>"; };
+		BC780FF91660290800D5FCB2 /* SGLocationAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLocationAnnotation.h; sourceTree = "<group>"; };
+		BC780FFA1660290800D5FCB2 /* SGLocationAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGLocationAnnotation.m; sourceTree = "<group>"; };
+		BC780FFB1660290800D5FCB2 /* SGMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMapViewController.h; sourceTree = "<group>"; };
+		BC780FFC1660290800D5FCB2 /* SGMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMapViewController.m; sourceTree = "<group>"; };
+		BC780FFD1660290800D5FCB2 /* SGTrackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTrackListViewController.h; sourceTree = "<group>"; };
+		BC780FFE1660290800D5FCB2 /* SGTrackListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTrackListViewController.m; sourceTree = "<group>"; };
+		BC780FFF1660290800D5FCB2 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		BC7810001660290800D5FCB2 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
+		BC7810011660290800D5FCB2 /* Track+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Track+Create.h"; sourceTree = "<group>"; };
+		BC7810021660290800D5FCB2 /* Track+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Track+Create.m"; sourceTree = "<group>"; };
+		BC7810041660290800D5FCB2 /* TrackModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackModel.xcdatamodel; sourceTree = "<group>"; };
+		BC78100F166029A700D5FCB2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BC781011166029AE00D5FCB2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BC781013166029B900D5FCB2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +116,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC781014166029B900D5FCB2 /* CoreData.framework in Frameworks */,
+				BC781012166029AE00D5FCB2 /* CoreLocation.framework in Frameworks */,
+				BC781010166029A700D5FCB2 /* MapKit.framework in Frameworks */,
 				BC780FD41660216900D5FCB2 /* AddressBook.framework in Frameworks */,
 				BC780F56165FEA8300D5FCB2 /* UIKit.framework in Frameworks */,
 				BC780F58165FEA8300D5FCB2 /* Foundation.framework in Frameworks */,
@@ -94,6 +132,9 @@
 		BC780F46165FEA8300D5FCB2 = {
 			isa = PBXGroup;
 			children = (
+				BC781013166029B900D5FCB2 /* CoreData.framework */,
+				BC781011166029AE00D5FCB2 /* CoreLocation.framework */,
+				BC78100F166029A700D5FCB2 /* MapKit.framework */,
 				BC780FD31660216900D5FCB2 /* AddressBook.framework */,
 				BC780F5B165FEA8300D5FCB2 /* SpyUTT */,
 				BC780F54165FEA8300D5FCB2 /* Frameworks */,
@@ -209,6 +250,25 @@
 		BC780FE81660261500D5FCB2 /* SpyGeo */ = {
 			isa = PBXGroup;
 			children = (
+				BC780FF11660290800D5FCB2 /* CoreDataTableViewController.h */,
+				BC780FF21660290800D5FCB2 /* CoreDataTableViewController.m */,
+				BC780FF31660290800D5FCB2 /* Location.h */,
+				BC780FF41660290800D5FCB2 /* Location.m */,
+				BC780FF51660290800D5FCB2 /* Location+Create.h */,
+				BC780FF61660290800D5FCB2 /* Location+Create.m */,
+				BC780FF71660290800D5FCB2 /* SGAddTrackViewController.h */,
+				BC780FF81660290800D5FCB2 /* SGAddTrackViewController.m */,
+				BC780FF91660290800D5FCB2 /* SGLocationAnnotation.h */,
+				BC780FFA1660290800D5FCB2 /* SGLocationAnnotation.m */,
+				BC780FFB1660290800D5FCB2 /* SGMapViewController.h */,
+				BC780FFC1660290800D5FCB2 /* SGMapViewController.m */,
+				BC780FFD1660290800D5FCB2 /* SGTrackListViewController.h */,
+				BC780FFE1660290800D5FCB2 /* SGTrackListViewController.m */,
+				BC780FFF1660290800D5FCB2 /* Track.h */,
+				BC7810001660290800D5FCB2 /* Track.m */,
+				BC7810011660290800D5FCB2 /* Track+Create.h */,
+				BC7810021660290800D5FCB2 /* Track+Create.m */,
+				BC7810031660290800D5FCB2 /* TrackModel.xcdatamodeld */,
 				BC780FEF1660269400D5FCB2 /* SpyGeo.png */,
 			);
 			name = SpyGeo;
@@ -299,6 +359,16 @@
 				BC780FCA16601FE400D5FCB2 /* ABDDetailSubView.m in Sources */,
 				BC780FCB16601FE400D5FCB2 /* ABDMasterViewController.m in Sources */,
 				BC780FDE1660236D00D5FCB2 /* SDDeviceInfoTableViewController.m in Sources */,
+				BC7810051660290800D5FCB2 /* CoreDataTableViewController.m in Sources */,
+				BC7810061660290800D5FCB2 /* Location.m in Sources */,
+				BC7810071660290800D5FCB2 /* Location+Create.m in Sources */,
+				BC7810081660290800D5FCB2 /* SGAddTrackViewController.m in Sources */,
+				BC7810091660290800D5FCB2 /* SGLocationAnnotation.m in Sources */,
+				BC78100A1660290800D5FCB2 /* SGMapViewController.m in Sources */,
+				BC78100B1660290800D5FCB2 /* SGTrackListViewController.m in Sources */,
+				BC78100C1660290800D5FCB2 /* Track.m in Sources */,
+				BC78100D1660290800D5FCB2 /* Track+Create.m in Sources */,
+				BC78100E1660290800D5FCB2 /* TrackModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +499,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BC7810031660290800D5FCB2 /* TrackModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BC7810041660290800D5FCB2 /* TrackModel.xcdatamodel */,
+			);
+			currentVersion = BC7810041660290800D5FCB2 /* TrackModel.xcdatamodel */;
+			path = TrackModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BC780F48165FEA8300D5FCB2 /* Project object */;
 }
