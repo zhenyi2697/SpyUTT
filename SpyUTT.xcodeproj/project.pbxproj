@@ -47,6 +47,13 @@
 		BC781010166029A700D5FCB2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC78100F166029A700D5FCB2 /* MapKit.framework */; };
 		BC781012166029AE00D5FCB2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC781011166029AE00D5FCB2 /* CoreLocation.framework */; };
 		BC781014166029B900D5FCB2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC781013166029B900D5FCB2 /* CoreData.framework */; };
+		BC781064166030AB00D5FCB2 /* CalCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781059166030AB00D5FCB2 /* CalCalendarCell.m */; };
+		BC781065166030AB00D5FCB2 /* CalChooseCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC78105B166030AB00D5FCB2 /* CalChooseCalendarViewController.m */; };
+		BC781066166030AB00D5FCB2 /* CalDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC78105D166030AB00D5FCB2 /* CalDetailCell.m */; };
+		BC781067166030AB00D5FCB2 /* CalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC78105F166030AB00D5FCB2 /* CalDetailViewController.m */; };
+		BC781068166030AB00D5FCB2 /* CalMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781061166030AB00D5FCB2 /* CalMasterViewController.m */; };
+		BC781069166030AB00D5FCB2 /* CalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781063166030AB00D5FCB2 /* CalModel.m */; };
+		BC78106B1660311C00D5FCB2 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC78106A1660311C00D5FCB2 /* EventKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +116,19 @@
 		BC78100F166029A700D5FCB2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BC781011166029AE00D5FCB2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BC781013166029B900D5FCB2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BC781058166030AB00D5FCB2 /* CalCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalCalendarCell.h; sourceTree = "<group>"; };
+		BC781059166030AB00D5FCB2 /* CalCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalCalendarCell.m; sourceTree = "<group>"; };
+		BC78105A166030AB00D5FCB2 /* CalChooseCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalChooseCalendarViewController.h; sourceTree = "<group>"; };
+		BC78105B166030AB00D5FCB2 /* CalChooseCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalChooseCalendarViewController.m; sourceTree = "<group>"; };
+		BC78105C166030AB00D5FCB2 /* CalDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalDetailCell.h; sourceTree = "<group>"; };
+		BC78105D166030AB00D5FCB2 /* CalDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalDetailCell.m; sourceTree = "<group>"; };
+		BC78105E166030AB00D5FCB2 /* CalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalDetailViewController.h; sourceTree = "<group>"; };
+		BC78105F166030AB00D5FCB2 /* CalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalDetailViewController.m; sourceTree = "<group>"; };
+		BC781060166030AB00D5FCB2 /* CalMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalMasterViewController.h; sourceTree = "<group>"; };
+		BC781061166030AB00D5FCB2 /* CalMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalMasterViewController.m; sourceTree = "<group>"; };
+		BC781062166030AB00D5FCB2 /* CalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalModel.h; sourceTree = "<group>"; };
+		BC781063166030AB00D5FCB2 /* CalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalModel.m; sourceTree = "<group>"; };
+		BC78106A1660311C00D5FCB2 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC78106B1660311C00D5FCB2 /* EventKit.framework in Frameworks */,
 				BC781014166029B900D5FCB2 /* CoreData.framework in Frameworks */,
 				BC781012166029AE00D5FCB2 /* CoreLocation.framework in Frameworks */,
 				BC781010166029A700D5FCB2 /* MapKit.framework in Frameworks */,
@@ -132,6 +153,7 @@
 		BC780F46165FEA8300D5FCB2 = {
 			isa = PBXGroup;
 			children = (
+				BC78106A1660311C00D5FCB2 /* EventKit.framework */,
 				BC781013166029B900D5FCB2 /* CoreData.framework */,
 				BC781011166029AE00D5FCB2 /* CoreLocation.framework */,
 				BC78100F166029A700D5FCB2 /* MapKit.framework */,
@@ -226,6 +248,18 @@
 		BC780FE11660249700D5FCB2 /* SpyCal */ = {
 			isa = PBXGroup;
 			children = (
+				BC781058166030AB00D5FCB2 /* CalCalendarCell.h */,
+				BC781059166030AB00D5FCB2 /* CalCalendarCell.m */,
+				BC78105A166030AB00D5FCB2 /* CalChooseCalendarViewController.h */,
+				BC78105B166030AB00D5FCB2 /* CalChooseCalendarViewController.m */,
+				BC78105C166030AB00D5FCB2 /* CalDetailCell.h */,
+				BC78105D166030AB00D5FCB2 /* CalDetailCell.m */,
+				BC78105E166030AB00D5FCB2 /* CalDetailViewController.h */,
+				BC78105F166030AB00D5FCB2 /* CalDetailViewController.m */,
+				BC781060166030AB00D5FCB2 /* CalMasterViewController.h */,
+				BC781061166030AB00D5FCB2 /* CalMasterViewController.m */,
+				BC781062166030AB00D5FCB2 /* CalModel.h */,
+				BC781063166030AB00D5FCB2 /* CalModel.m */,
 				BC780FE3166024B200D5FCB2 /* SpyCal.png */,
 			);
 			name = SpyCal;
@@ -369,6 +403,12 @@
 				BC78100C1660290800D5FCB2 /* Track.m in Sources */,
 				BC78100D1660290800D5FCB2 /* Track+Create.m in Sources */,
 				BC78100E1660290800D5FCB2 /* TrackModel.xcdatamodeld in Sources */,
+				BC781064166030AB00D5FCB2 /* CalCalendarCell.m in Sources */,
+				BC781065166030AB00D5FCB2 /* CalChooseCalendarViewController.m in Sources */,
+				BC781066166030AB00D5FCB2 /* CalDetailCell.m in Sources */,
+				BC781067166030AB00D5FCB2 /* CalDetailViewController.m in Sources */,
+				BC781068166030AB00D5FCB2 /* CalMasterViewController.m in Sources */,
+				BC781069166030AB00D5FCB2 /* CalModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
