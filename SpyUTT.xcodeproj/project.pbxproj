@@ -29,6 +29,7 @@
 		BC25C45F16627AD5002C7F31 /* schemeApps.json in Resources */ = {isa = PBXBuildFile; fileRef = BC25C45D16627AD5002C7F31 /* schemeApps.json */; };
 		BC25C46416627B2F002C7F31 /* AppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C46116627B2F002C7F31 /* AppCell.m */; };
 		BC25C46516627B2F002C7F31 /* PROCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C46316627B2F002C7F31 /* PROCSecondViewController.m */; };
+		BC2A88551662CCB800A8D4B0 /* SpyUTT.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A88541662CCB800A8D4B0 /* SpyUTT.png */; };
 		BC69C98E16627FFA0081B302 /* AddictionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69C97916627FFA0081B302 /* AddictionModel.m */; };
 		BC69C98F16627FFA0081B302 /* DCDTrackDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69C97B16627FFA0081B302 /* DCDTrackDataController.m */; };
 		BC69C99016627FFA0081B302 /* PROCAddictionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69C97D16627FFA0081B302 /* PROCAddictionCell.m */; };
@@ -151,6 +152,7 @@
 		BC25C46116627B2F002C7F31 /* AppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCell.m; sourceTree = "<group>"; };
 		BC25C46216627B2F002C7F31 /* PROCSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROCSecondViewController.h; sourceTree = "<group>"; };
 		BC25C46316627B2F002C7F31 /* PROCSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROCSecondViewController.m; sourceTree = "<group>"; };
+		BC2A88541662CCB800A8D4B0 /* SpyUTT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpyUTT.png; sourceTree = "<group>"; };
 		BC69C97816627FFA0081B302 /* AddictionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddictionModel.h; sourceTree = "<group>"; };
 		BC69C97916627FFA0081B302 /* AddictionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddictionModel.m; sourceTree = "<group>"; };
 		BC69C97A16627FFA0081B302 /* DCDTrackDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCDTrackDataController.h; sourceTree = "<group>"; };
@@ -472,6 +474,7 @@
 		BC780F5C165FEA8300D5FCB2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BC2A88541662CCB800A8D4B0 /* SpyUTT.png */,
 				BC780FC516601FE400D5FCB2 /* background.png */,
 				BC780FC716601FE400D5FCB2 /* up.png */,
 				BC780F70165FEA8400D5FCB2 /* MainStoryboard_iPad.storyboard */,
@@ -688,6 +691,7 @@
 				BC69C9C516628F7E0081B302 /* Voice Memos  4.2.1.png in Resources */,
 				BC69C9C616628F7E0081B302 /* Weather Fahrenheit.png in Resources */,
 				BC69C9C91662905F0081B302 /* Phone.png in Resources */,
+				BC2A88551662CCB800A8D4B0 /* SpyUTT.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
