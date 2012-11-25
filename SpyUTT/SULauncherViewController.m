@@ -11,6 +11,8 @@
 #import "ABDContactController.h"
 #import "RemMasterViewController.h"
 #import "RemModel.h"
+#import "SPMasterViewController.h"
+#import "SPPhotoLibraryController.h"
 
 @interface SULauncherViewController ()
 
@@ -34,6 +36,11 @@
         RemMasterViewController *remMasterViewController = (RemMasterViewController *)segue.destinationViewController;
         RemModel *remModel = [[RemModel alloc] init];
         remMasterViewController.model = remModel;
+    } else if([segue.identifier isEqualToString:@"SUShowPhotos"]) {
+        SPMasterViewController *photoMasterViewController = (SPMasterViewController *)segue.destinationViewController;
+        SPPhotoLibraryController *photoDataController = [[SPPhotoLibraryController alloc] init];
+        photoMasterViewController.photoLibraryController = photoDataController;
+        photoDataController.delegate = photoMasterViewController;
     }
 }
 

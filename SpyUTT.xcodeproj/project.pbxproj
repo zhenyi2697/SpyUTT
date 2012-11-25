@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC25C42516624EA1002C7F31 /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = BC25C41516624EA1002C7F31 /* arrow_left.png */; };
+		BC25C42616624EA1002C7F31 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = BC25C41616624EA1002C7F31 /* arrow_right.png */; };
+		BC25C42716624EA1002C7F31 /* SPAllDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C41816624EA1002C7F31 /* SPAllDetailsViewController.m */; };
+		BC25C42816624EA1002C7F31 /* SPMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C41A16624EA1002C7F31 /* SPMasterViewController.m */; };
+		BC25C42916624EA1002C7F31 /* SPPhotoAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C41C16624EA1002C7F31 /* SPPhotoAnnotation.m */; };
+		BC25C42A16624EA1002C7F31 /* SPPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C41E16624EA1002C7F31 /* SPPhotoCell.m */; };
+		BC25C42B16624EA1002C7F31 /* SPPhotoLibraryController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C42016624EA1002C7F31 /* SPPhotoLibraryController.m */; };
+		BC25C42C16624EA1002C7F31 /* SPPhotoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C42216624EA1002C7F31 /* SPPhotoMapViewController.m */; };
+		BC25C42D16624EA1002C7F31 /* SPPhotoViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C42416624EA1002C7F31 /* SPPhotoViewerController.m */; };
+		BC25C43016624FFD002C7F31 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC25C42F16624FFD002C7F31 /* AssetsLibrary.framework */; };
 		BC780F56165FEA8300D5FCB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F55165FEA8300D5FCB2 /* UIKit.framework */; };
 		BC780F58165FEA8300D5FCB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F57165FEA8300D5FCB2 /* Foundation.framework */; };
 		BC780F5A165FEA8300D5FCB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F59165FEA8300D5FCB2 /* CoreGraphics.framework */; };
@@ -61,6 +71,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC25C41516624EA1002C7F31 /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
+		BC25C41616624EA1002C7F31 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
+		BC25C41716624EA1002C7F31 /* SPAllDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAllDetailsViewController.h; sourceTree = "<group>"; };
+		BC25C41816624EA1002C7F31 /* SPAllDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAllDetailsViewController.m; sourceTree = "<group>"; };
+		BC25C41916624EA1002C7F31 /* SPMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPMasterViewController.h; sourceTree = "<group>"; };
+		BC25C41A16624EA1002C7F31 /* SPMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPMasterViewController.m; sourceTree = "<group>"; };
+		BC25C41B16624EA1002C7F31 /* SPPhotoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhotoAnnotation.h; sourceTree = "<group>"; };
+		BC25C41C16624EA1002C7F31 /* SPPhotoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhotoAnnotation.m; sourceTree = "<group>"; };
+		BC25C41D16624EA1002C7F31 /* SPPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhotoCell.h; sourceTree = "<group>"; };
+		BC25C41E16624EA1002C7F31 /* SPPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhotoCell.m; sourceTree = "<group>"; };
+		BC25C41F16624EA1002C7F31 /* SPPhotoLibraryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhotoLibraryController.h; sourceTree = "<group>"; };
+		BC25C42016624EA1002C7F31 /* SPPhotoLibraryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhotoLibraryController.m; sourceTree = "<group>"; };
+		BC25C42116624EA1002C7F31 /* SPPhotoMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhotoMapViewController.h; sourceTree = "<group>"; };
+		BC25C42216624EA1002C7F31 /* SPPhotoMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhotoMapViewController.m; sourceTree = "<group>"; };
+		BC25C42316624EA1002C7F31 /* SPPhotoViewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhotoViewerController.h; sourceTree = "<group>"; };
+		BC25C42416624EA1002C7F31 /* SPPhotoViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhotoViewerController.m; sourceTree = "<group>"; };
+		BC25C42F16624FFD002C7F31 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		BC780F51165FEA8300D5FCB2 /* SpyUTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpyUTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC780F55165FEA8300D5FCB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BC780F57165FEA8300D5FCB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -148,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC25C43016624FFD002C7F31 /* AssetsLibrary.framework in Frameworks */,
 				BC78106B1660311C00D5FCB2 /* EventKit.framework in Frameworks */,
 				BC781014166029B900D5FCB2 /* CoreData.framework in Frameworks */,
 				BC781012166029AE00D5FCB2 /* CoreLocation.framework in Frameworks */,
@@ -165,6 +193,7 @@
 		BC780F46165FEA8300D5FCB2 = {
 			isa = PBXGroup;
 			children = (
+				BC25C42F16624FFD002C7F31 /* AssetsLibrary.framework */,
 				BC78106A1660311C00D5FCB2 /* EventKit.framework */,
 				BC781013166029B900D5FCB2 /* CoreData.framework */,
 				BC781011166029AE00D5FCB2 /* CoreLocation.framework */,
@@ -296,6 +325,22 @@
 		BC780FE71660260F00D5FCB2 /* SpyPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				BC25C41516624EA1002C7F31 /* arrow_left.png */,
+				BC25C41616624EA1002C7F31 /* arrow_right.png */,
+				BC25C41716624EA1002C7F31 /* SPAllDetailsViewController.h */,
+				BC25C41816624EA1002C7F31 /* SPAllDetailsViewController.m */,
+				BC25C41916624EA1002C7F31 /* SPMasterViewController.h */,
+				BC25C41A16624EA1002C7F31 /* SPMasterViewController.m */,
+				BC25C41B16624EA1002C7F31 /* SPPhotoAnnotation.h */,
+				BC25C41C16624EA1002C7F31 /* SPPhotoAnnotation.m */,
+				BC25C41D16624EA1002C7F31 /* SPPhotoCell.h */,
+				BC25C41E16624EA1002C7F31 /* SPPhotoCell.m */,
+				BC25C41F16624EA1002C7F31 /* SPPhotoLibraryController.h */,
+				BC25C42016624EA1002C7F31 /* SPPhotoLibraryController.m */,
+				BC25C42116624EA1002C7F31 /* SPPhotoMapViewController.h */,
+				BC25C42216624EA1002C7F31 /* SPPhotoMapViewController.m */,
+				BC25C42316624EA1002C7F31 /* SPPhotoViewerController.h */,
+				BC25C42416624EA1002C7F31 /* SPPhotoViewerController.m */,
 				BC780FE91660266100D5FCB2 /* SpyPhoto.png */,
 			);
 			name = SpyPhoto;
@@ -395,6 +440,8 @@
 				BC780FE6166024CA00D5FCB2 /* SpyRem.png in Resources */,
 				BC780FEA1660266100D5FCB2 /* SpyPhoto.png in Resources */,
 				BC780FF01660269400D5FCB2 /* SpyGeo.png in Resources */,
+				BC25C42516624EA1002C7F31 /* arrow_left.png in Resources */,
+				BC25C42616624EA1002C7F31 /* arrow_right.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +480,13 @@
 				BC781088166034F800D5FCB2 /* RemEventDetailCell.m in Sources */,
 				BC781089166034F800D5FCB2 /* RemMasterViewController.m in Sources */,
 				BC78108A166034F800D5FCB2 /* RemModel.m in Sources */,
+				BC25C42716624EA1002C7F31 /* SPAllDetailsViewController.m in Sources */,
+				BC25C42816624EA1002C7F31 /* SPMasterViewController.m in Sources */,
+				BC25C42916624EA1002C7F31 /* SPPhotoAnnotation.m in Sources */,
+				BC25C42A16624EA1002C7F31 /* SPPhotoCell.m in Sources */,
+				BC25C42B16624EA1002C7F31 /* SPPhotoLibraryController.m in Sources */,
+				BC25C42C16624EA1002C7F31 /* SPPhotoMapViewController.m in Sources */,
+				BC25C42D16624EA1002C7F31 /* SPPhotoViewerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
