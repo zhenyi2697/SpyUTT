@@ -17,12 +17,18 @@
     AddictionModel *model;
     NSArray *keys;
     PROCAppDetection *appDetection;
+    NSTimer *theTimer;
 }
 @end
 
 @implementation PROCForthViewController
 
 @synthesize result = _result;
+
+- (void)saveTrack
+{
+    [model saveTrack];
+}
 
 - (void)viewDidLoad
 {
@@ -32,6 +38,11 @@
     self.result = [model retrieveAppsUtilisationTime];
     
 	// Do any additional setup after loading the view.
+    UIBackgroundTaskIdentifier bgtask;
+    bgtask = [[UIApplication sharedApplication]beginBackgroundTaskWithExpirationHandler:^{
+        
+    }];
+    theTimer=[NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(saveTrack) userInfo:nil repeats:YES];
 }
 
 -(void)setResult:(NSDictionary *)result

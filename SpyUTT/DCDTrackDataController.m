@@ -21,7 +21,7 @@
             //get document directory as a url
             NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
             //在url后面append一个子目录
-            url = [url URLByAppendingPathComponent:@"Addiction Track Database"];
+            url = [url URLByAppendingPathComponent:@"Default Track Database"];
             //之后创建database就好了
             self.trackDatabase = [[UIManagedDocument alloc] initWithFileURL:url];
         }

@@ -6,6 +6,12 @@
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="whoTracked" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Track" inverseName="locations" inverseEntity="Track" syncable="YES"/>
     </entity>
+    <entity name="SBTrack" syncable="YES">
+        <attribute name="bundleid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="timeOnly" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
     <entity name="Track" representedClassName="Track" syncable="YES">
         <attribute name="endTime" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="interval" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -16,5 +22,6 @@
     <elements>
         <element name="Location" positionX="385" positionY="252" width="128" height="103"/>
         <element name="Track" positionX="160" positionY="192" width="128" height="118"/>
+        <element name="SBTrack" positionX="432" positionY="72" width="128" height="105"/>
     </elements>
 </model>

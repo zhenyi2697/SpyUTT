@@ -13,11 +13,9 @@
 {
     AddictionModel *model;
     NSDateFormatter *formatter;
-    NSTimer *theTimer;
 }
 
 @end
-
 @implementation PROCThirdViewController
 
 @synthesize days = _days, beginTime = _beginTime, endTime = _endTime;
@@ -45,17 +43,6 @@
     //model = [[AddictionModel alloc]init];
     model = [(SUAppDelegate *)[[UIApplication sharedApplication] delegate] addictionModel];
     
-    UIBackgroundTaskIdentifier bgtask;
-    bgtask = [[UIApplication sharedApplication]beginBackgroundTaskWithExpirationHandler:^{
-        
-    }];
-    theTimer=[NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(saveTrack) userInfo:nil repeats:YES];
-    
-}
-
-- (void)saveTrack
-{
-    [model saveTrack];
 }
 
 

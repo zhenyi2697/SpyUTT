@@ -14,7 +14,9 @@
 {
     // Override point for customization after application launch.
     
-    self.addictionModel = [[AddictionModel alloc] init];
+    self.databaseController = [[DCDTrackDataController alloc] init];
+    
+    self.addictionModel = [[AddictionModel alloc] initWithDataController:self.databaseController];
     
     return YES;
 }

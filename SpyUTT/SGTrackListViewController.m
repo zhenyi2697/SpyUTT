@@ -102,50 +102,50 @@
     [Track trackWithType:TRACK_TYPE_TIMER andInterval:[NSNumber numberWithInt:5] inManagedContext:self.trackDatabase.managedObjectContext];
 }
 
-//用于在磁盘新建文档，打开文档等操作
--(void)useDocument
-{
-    if (![[NSFileManager defaultManager] fileExistsAtPath:[self.trackDatabase.fileURL path]]) {//如果这个database在磁盘里不存在，那么就创建数据库
-        [self.trackDatabase saveToURL:self.trackDatabase.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success){
-            [self setupFetchedResultsController]; // 这里不用等待下一行的fetch结束，因为一旦hook上了controller，如果数据库更新，controller会自动更新数据
-            
-            //可以再此预添加数据
-            //[self deleteAllTracks];//先删除所有之前的track
-        }];
-    }else if (self.trackDatabase.documentState == UIDocumentStateClosed) { //如果数据库被关闭里，那么就打开它
-        [self.trackDatabase openWithCompletionHandler:^(BOOL success){
-            [self setupFetchedResultsController];
-            //删除之前所有数据
-            //[self deleteAllTracks];
-        }];
-    } else if (self.trackDatabase.documentState == UIDocumentStateNormal) { //如果状态正常（已经被打开了）
-        //我们需要初始化fetchController，以便获取数据
-        [self setupFetchedResultsController];
-        //删除之前所有数据
-        //[self deleteAllTracks];
-    }
-}
+////用于在磁盘新建文档，打开文档等操作
+//-(void)useDocument
+//{
+//    if (![[NSFileManager defaultManager] fileExistsAtPath:[self.trackDatabase.fileURL path]]) {//如果这个database在磁盘里不存在，那么就创建数据库
+//        [self.trackDatabase saveToURL:self.trackDatabase.fileURL forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success){
+//            [self setupFetchedResultsController]; // 这里不用等待下一行的fetch结束，因为一旦hook上了controller，如果数据库更新，controller会自动更新数据
+//            
+//            //可以再此预添加数据
+//            //[self deleteAllTracks];//先删除所有之前的track
+//        }];
+//    }else if (self.trackDatabase.documentState == UIDocumentStateClosed) { //如果数据库被关闭里，那么就打开它
+//        [self.trackDatabase openWithCompletionHandler:^(BOOL success){
+//            [self setupFetchedResultsController];
+//            //删除之前所有数据
+//            //[self deleteAllTracks];
+//        }];
+//    } else if (self.trackDatabase.documentState == UIDocumentStateNormal) { //如果状态正常（已经被打开了）
+//        //我们需要初始化fetchController，以便获取数据
+//        [self setupFetchedResultsController];
+//        //删除之前所有数据
+//        //[self deleteAllTracks];
+//    }
+//}
 
 -(void)setTrackDatabase:(UIManagedDocument *)trackDatabase
 {
     if (_trackDatabase != trackDatabase) {
         _trackDatabase = trackDatabase;
-        [self useDocument];
+        [self setupFetchedResultsController];
     }
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if (!self.trackDatabase) {
-        //创建一个database需要一个url，所以先创建url（url其实就是文件目录）
-        //get document directory as a url
-        NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-        //在url后面append一个子目录
-        url = [url URLByAppendingPathComponent:@"Default Track Database"];
-        //之后创建database就好了
-        self.trackDatabase = [[UIManagedDocument alloc] initWithFileURL:url];
-    }
+//    if (!self.trackDatabase) {
+//        //创建一个database需要一个url，所以先创建url（url其实就是文件目录）
+//        //get document directory as a url
+//        NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+//        //在url后面append一个子目录
+//        url = [url URLByAppendingPathComponent:@"Default Track Database"];
+//        //之后创建database就好了
+//        self.trackDatabase = [[UIManagedDocument alloc] initWithFileURL:url];
+//    }
 }
 
 - (void)viewDidLoad

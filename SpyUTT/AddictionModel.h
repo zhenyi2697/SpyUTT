@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DCDTrackDataController.h"
 
 @interface AddictionModel : NSObject
+
+-(id)initWithDataController: (DCDTrackDataController *)newDataController;
 
 - (void)saveTrack;
 

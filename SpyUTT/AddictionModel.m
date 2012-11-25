@@ -8,7 +8,6 @@
 
 #import "AddictionModel.h"
 #import "SBTrack+CreateTrack.h"
-#import "DCDTrackDataController.h"
 #import "PTDevice.h"
 
 @implementation AddictionModel
@@ -16,10 +15,11 @@
     DCDTrackDataController *dataController;
 }
 
--(id)init
+-(id)initWithDataController: (DCDTrackDataController *)newDataController
 {
     self = [super init];
-    dataController = [[DCDTrackDataController alloc]init];
+    //dataController = [[DCDTrackDataController alloc]init];
+    dataController = newDataController;
     return self;
 }
 

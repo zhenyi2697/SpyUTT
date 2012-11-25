@@ -29,7 +29,6 @@
 		BC25C45F16627AD5002C7F31 /* schemeApps.json in Resources */ = {isa = PBXBuildFile; fileRef = BC25C45D16627AD5002C7F31 /* schemeApps.json */; };
 		BC25C46416627B2F002C7F31 /* AppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C46116627B2F002C7F31 /* AppCell.m */; };
 		BC25C46516627B2F002C7F31 /* PROCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C46316627B2F002C7F31 /* PROCSecondViewController.m */; };
-		BC69C97616627EE60081B302 /* AddictionTrackModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC69C97416627EE60081B302 /* AddictionTrackModel.xcdatamodeld */; };
 		BC69C98E16627FFA0081B302 /* AddictionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69C97916627FFA0081B302 /* AddictionModel.m */; };
 		BC69C98F16627FFA0081B302 /* DCDTrackDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69C97B16627FFA0081B302 /* DCDTrackDataController.m */; };
 		BC69C99016627FFA0081B302 /* PROCAddictionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69C97D16627FFA0081B302 /* PROCAddictionCell.m */; };
@@ -152,7 +151,6 @@
 		BC25C46116627B2F002C7F31 /* AppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCell.m; sourceTree = "<group>"; };
 		BC25C46216627B2F002C7F31 /* PROCSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROCSecondViewController.h; sourceTree = "<group>"; };
 		BC25C46316627B2F002C7F31 /* PROCSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROCSecondViewController.m; sourceTree = "<group>"; };
-		BC69C97516627EE60081B302 /* AddictionTrackModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AddictionTrackModel.xcdatamodel; sourceTree = "<group>"; };
 		BC69C97816627FFA0081B302 /* AddictionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddictionModel.h; sourceTree = "<group>"; };
 		BC69C97916627FFA0081B302 /* AddictionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddictionModel.m; sourceTree = "<group>"; };
 		BC69C97A16627FFA0081B302 /* DCDTrackDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCDTrackDataController.h; sourceTree = "<group>"; };
@@ -331,11 +329,8 @@
 			isa = PBXGroup;
 			children = (
 				BC69C9C716628F880081B302 /* App Icons */,
-				BC69C97416627EE60081B302 /* AddictionTrackModel.xcdatamodeld */,
 				BC69C97816627FFA0081B302 /* AddictionModel.h */,
 				BC69C97916627FFA0081B302 /* AddictionModel.m */,
-				BC69C97A16627FFA0081B302 /* DCDTrackDataController.h */,
-				BC69C97B16627FFA0081B302 /* DCDTrackDataController.m */,
 				BC69C97C16627FFA0081B302 /* PROCAddictionCell.h */,
 				BC69C97D16627FFA0081B302 /* PROCAddictionCell.m */,
 				BC69C97E16627FFA0081B302 /* PROCAddictionResultViewController.h */,
@@ -350,10 +345,6 @@
 				BC69C98716627FFA0081B302 /* PROCForthViewController.m */,
 				BC69C98816627FFA0081B302 /* PROCThirdViewController.h */,
 				BC69C98916627FFA0081B302 /* PROCThirdViewController.m */,
-				BC69C98A16627FFA0081B302 /* SBTrack.h */,
-				BC69C98B16627FFA0081B302 /* SBTrack.m */,
-				BC69C98C16627FFA0081B302 /* SBTrack+CreateTrack.h */,
-				BC69C98D16627FFA0081B302 /* SBTrack+CreateTrack.m */,
 				BC25C44516626545002C7F31 /* Addiction.png */,
 			);
 			name = AppAddiction;
@@ -368,6 +359,28 @@
 			);
 			name = iHasApp;
 			path = ../iHasApp;
+			sourceTree = "<group>";
+		};
+		BC2A884B1662C91B00A8D4B0 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				BC69C97A16627FFA0081B302 /* DCDTrackDataController.h */,
+				BC69C97B16627FFA0081B302 /* DCDTrackDataController.m */,
+				BC780FF31660290800D5FCB2 /* Location.h */,
+				BC780FF41660290800D5FCB2 /* Location.m */,
+				BC780FF51660290800D5FCB2 /* Location+Create.h */,
+				BC780FF61660290800D5FCB2 /* Location+Create.m */,
+				BC780FFF1660290800D5FCB2 /* Track.h */,
+				BC7810001660290800D5FCB2 /* Track.m */,
+				BC7810011660290800D5FCB2 /* Track+Create.h */,
+				BC7810021660290800D5FCB2 /* Track+Create.m */,
+				BC7810031660290800D5FCB2 /* TrackModel.xcdatamodeld */,
+				BC69C98A16627FFA0081B302 /* SBTrack.h */,
+				BC69C98B16627FFA0081B302 /* SBTrack.m */,
+				BC69C98C16627FFA0081B302 /* SBTrack+CreateTrack.h */,
+				BC69C98D16627FFA0081B302 /* SBTrack+CreateTrack.m */,
+			);
+			name = database;
 			sourceTree = "<group>";
 		};
 		BC69C9C716628F880081B302 /* App Icons */ = {
@@ -437,6 +450,7 @@
 		BC780F5B165FEA8300D5FCB2 /* SpyUTT */ = {
 			isa = PBXGroup;
 			children = (
+				BC2A884B1662C91B00A8D4B0 /* database */,
 				BC25C45A16627AD5002C7F31 /* iHasApp */,
 				BC25C442166264BD002C7F31 /* AppAddiction */,
 				BC25C441166264B6002C7F31 /* SpyProc */,
@@ -566,10 +580,6 @@
 			children = (
 				BC780FF11660290800D5FCB2 /* CoreDataTableViewController.h */,
 				BC780FF21660290800D5FCB2 /* CoreDataTableViewController.m */,
-				BC780FF31660290800D5FCB2 /* Location.h */,
-				BC780FF41660290800D5FCB2 /* Location.m */,
-				BC780FF51660290800D5FCB2 /* Location+Create.h */,
-				BC780FF61660290800D5FCB2 /* Location+Create.m */,
 				BC780FF71660290800D5FCB2 /* SGAddTrackViewController.h */,
 				BC780FF81660290800D5FCB2 /* SGAddTrackViewController.m */,
 				BC780FF91660290800D5FCB2 /* SGLocationAnnotation.h */,
@@ -578,11 +588,6 @@
 				BC780FFC1660290800D5FCB2 /* SGMapViewController.m */,
 				BC780FFD1660290800D5FCB2 /* SGTrackListViewController.h */,
 				BC780FFE1660290800D5FCB2 /* SGTrackListViewController.m */,
-				BC780FFF1660290800D5FCB2 /* Track.h */,
-				BC7810001660290800D5FCB2 /* Track.m */,
-				BC7810011660290800D5FCB2 /* Track+Create.h */,
-				BC7810021660290800D5FCB2 /* Track+Create.m */,
-				BC7810031660290800D5FCB2 /* TrackModel.xcdatamodeld */,
 				BC780FEF1660269400D5FCB2 /* SpyGeo.png */,
 			);
 			name = SpyGeo;
@@ -734,7 +739,6 @@
 				BC25C45E16627AD5002C7F31 /* iHasApp.m in Sources */,
 				BC25C46416627B2F002C7F31 /* AppCell.m in Sources */,
 				BC25C46516627B2F002C7F31 /* PROCSecondViewController.m in Sources */,
-				BC69C97616627EE60081B302 /* AddictionTrackModel.xcdatamodeld in Sources */,
 				BC69C98E16627FFA0081B302 /* AddictionModel.m in Sources */,
 				BC69C98F16627FFA0081B302 /* DCDTrackDataController.m in Sources */,
 				BC69C99016627FFA0081B302 /* PROCAddictionCell.m in Sources */,
@@ -895,16 +899,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BC69C97416627EE60081B302 /* AddictionTrackModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				BC69C97516627EE60081B302 /* AddictionTrackModel.xcdatamodel */,
-			);
-			currentVersion = BC69C97516627EE60081B302 /* AddictionTrackModel.xcdatamodel */;
-			path = AddictionTrackModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		BC7810031660290800D5FCB2 /* TrackModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

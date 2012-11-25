@@ -14,6 +14,8 @@
 #import "SPMasterViewController.h"
 #import "SPPhotoLibraryController.h"
 #import "PROCFirstViewController.h"
+#import "SGTrackListViewController.h"
+#import "SUAppDelegate.h"
 
 @interface SULauncherViewController ()
 
@@ -46,6 +48,9 @@
         PROCFirstViewController *procFirstViewController = (PROCFirstViewController *)segue.destinationViewController;
         NSDictionary *processes = [[UIDevice currentDevice] runningProcesses];
         procFirstViewController.processes = processes;
+    } else if([segue.identifier isEqualToString:@"SUShowGeo"]) {
+        SGTrackListViewController *trackListController = (SGTrackListViewController *)segue.destinationViewController;
+        trackListController.trackDatabase = [(SUAppDelegate *)[[UIApplication sharedApplication] delegate] databaseController].trackDatabase;
     }
 }
 

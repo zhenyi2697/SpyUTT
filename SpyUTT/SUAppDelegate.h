@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "AddictionModel.h"
+#import "DCDTrackDataController.h"
+
 @interface SUAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong,nonatomic) AddictionModel *addictionModel;
+@property (strong,nonatomic) DCDTrackDataController *databaseController;
 @end
