@@ -52,9 +52,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self showProgressAlertView];
-    
 }
 
 - (void)didReceiveMemoryWarning

@@ -17,6 +17,12 @@
 		BC25C42C16624EA1002C7F31 /* SPPhotoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C42216624EA1002C7F31 /* SPPhotoMapViewController.m */; };
 		BC25C42D16624EA1002C7F31 /* SPPhotoViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C42416624EA1002C7F31 /* SPPhotoViewerController.m */; };
 		BC25C43016624FFD002C7F31 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC25C42F16624FFD002C7F31 /* AssetsLibrary.framework */; };
+		BC25C440166264A0002C7F31 /* iHasApp.png in Resources */ = {isa = PBXBuildFile; fileRef = BC25C43F166264A0002C7F31 /* iHasApp.png */; };
+		BC25C4441662651A002C7F31 /* SpyProc.png in Resources */ = {isa = PBXBuildFile; fileRef = BC25C4431662651A002C7F31 /* SpyProc.png */; };
+		BC25C44616626545002C7F31 /* Addiction.png in Resources */ = {isa = PBXBuildFile; fileRef = BC25C44516626545002C7F31 /* Addiction.png */; };
+		BC25C44D16627630002C7F31 /* PROCFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C44C16627630002C7F31 /* PROCFirstViewController.m */; };
+		BC25C45016627698002C7F31 /* PROCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C44F16627698002C7F31 /* PROCCell.m */; };
+		BC25C453166276F4002C7F31 /* PTDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C452166276F4002C7F31 /* PTDevice.m */; };
 		BC780F56165FEA8300D5FCB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F55165FEA8300D5FCB2 /* UIKit.framework */; };
 		BC780F58165FEA8300D5FCB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F57165FEA8300D5FCB2 /* Foundation.framework */; };
 		BC780F5A165FEA8300D5FCB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F59165FEA8300D5FCB2 /* CoreGraphics.framework */; };
@@ -88,6 +94,15 @@
 		BC25C42316624EA1002C7F31 /* SPPhotoViewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhotoViewerController.h; sourceTree = "<group>"; };
 		BC25C42416624EA1002C7F31 /* SPPhotoViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhotoViewerController.m; sourceTree = "<group>"; };
 		BC25C42F16624FFD002C7F31 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		BC25C43F166264A0002C7F31 /* iHasApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iHasApp.png; sourceTree = "<group>"; };
+		BC25C4431662651A002C7F31 /* SpyProc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpyProc.png; sourceTree = "<group>"; };
+		BC25C44516626545002C7F31 /* Addiction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Addiction.png; sourceTree = "<group>"; };
+		BC25C44B16627630002C7F31 /* PROCFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROCFirstViewController.h; sourceTree = "<group>"; };
+		BC25C44C16627630002C7F31 /* PROCFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROCFirstViewController.m; sourceTree = "<group>"; };
+		BC25C44E16627698002C7F31 /* PROCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROCCell.h; sourceTree = "<group>"; };
+		BC25C44F16627698002C7F31 /* PROCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROCCell.m; sourceTree = "<group>"; };
+		BC25C451166276F4002C7F31 /* PTDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDevice.h; sourceTree = "<group>"; };
+		BC25C452166276F4002C7F31 /* PTDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDevice.m; sourceTree = "<group>"; };
 		BC780F51165FEA8300D5FCB2 /* SpyUTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpyUTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC780F55165FEA8300D5FCB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BC780F57165FEA8300D5FCB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -190,6 +205,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC25C43D1662648C002C7F31 /* iHasAppFiles */ = {
+			isa = PBXGroup;
+			children = (
+				BC25C43F166264A0002C7F31 /* iHasApp.png */,
+			);
+			name = iHasAppFiles;
+			sourceTree = "<group>";
+		};
+		BC25C441166264B6002C7F31 /* SpyProc */ = {
+			isa = PBXGroup;
+			children = (
+				BC25C44E16627698002C7F31 /* PROCCell.h */,
+				BC25C451166276F4002C7F31 /* PTDevice.h */,
+				BC25C452166276F4002C7F31 /* PTDevice.m */,
+				BC25C44F16627698002C7F31 /* PROCCell.m */,
+				BC25C44B16627630002C7F31 /* PROCFirstViewController.h */,
+				BC25C44C16627630002C7F31 /* PROCFirstViewController.m */,
+				BC25C4431662651A002C7F31 /* SpyProc.png */,
+			);
+			name = SpyProc;
+			sourceTree = "<group>";
+		};
+		BC25C442166264BD002C7F31 /* AppAddiction */ = {
+			isa = PBXGroup;
+			children = (
+				BC25C44516626545002C7F31 /* Addiction.png */,
+			);
+			name = AppAddiction;
+			sourceTree = "<group>";
+		};
 		BC780F46165FEA8300D5FCB2 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +271,9 @@
 		BC780F5B165FEA8300D5FCB2 /* SpyUTT */ = {
 			isa = PBXGroup;
 			children = (
+				BC25C442166264BD002C7F31 /* AppAddiction */,
+				BC25C441166264B6002C7F31 /* SpyProc */,
+				BC25C43D1662648C002C7F31 /* iHasAppFiles */,
 				BC780FE81660261500D5FCB2 /* SpyGeo */,
 				BC780FE71660260F00D5FCB2 /* SpyPhoto */,
 				BC780FE21660249F00D5FCB2 /* SpyRem */,
@@ -442,6 +490,9 @@
 				BC780FF01660269400D5FCB2 /* SpyGeo.png in Resources */,
 				BC25C42516624EA1002C7F31 /* arrow_left.png in Resources */,
 				BC25C42616624EA1002C7F31 /* arrow_right.png in Resources */,
+				BC25C440166264A0002C7F31 /* iHasApp.png in Resources */,
+				BC25C4441662651A002C7F31 /* SpyProc.png in Resources */,
+				BC25C44616626545002C7F31 /* Addiction.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +538,9 @@
 				BC25C42B16624EA1002C7F31 /* SPPhotoLibraryController.m in Sources */,
 				BC25C42C16624EA1002C7F31 /* SPPhotoMapViewController.m in Sources */,
 				BC25C42D16624EA1002C7F31 /* SPPhotoViewerController.m in Sources */,
+				BC25C44D16627630002C7F31 /* PROCFirstViewController.m in Sources */,
+				BC25C45016627698002C7F31 /* PROCCell.m in Sources */,
+				BC25C453166276F4002C7F31 /* PTDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

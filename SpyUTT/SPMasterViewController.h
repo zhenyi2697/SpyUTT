@@ -14,4 +14,6 @@
 
 @property (nonatomic,strong) SPPhotoLibraryController *photoLibraryController;
 
+-(void)showProgressAlertView;
+
 @end

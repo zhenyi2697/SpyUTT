@@ -13,6 +13,7 @@
 #import "RemModel.h"
 #import "SPMasterViewController.h"
 #import "SPPhotoLibraryController.h"
+#import "PROCFirstViewController.h"
 
 @interface SULauncherViewController ()
 
@@ -41,6 +42,10 @@
         SPPhotoLibraryController *photoDataController = [[SPPhotoLibraryController alloc] init];
         photoMasterViewController.photoLibraryController = photoDataController;
         photoDataController.delegate = photoMasterViewController;
+    } else if ([segue.identifier isEqualToString:@"SUShowProcs"]) {
+        PROCFirstViewController *procFirstViewController = (PROCFirstViewController *)segue.destinationViewController;
+        NSDictionary *processes = [[UIDevice currentDevice] runningProcesses];
+        procFirstViewController.processes = processes;
     }
 }
 
