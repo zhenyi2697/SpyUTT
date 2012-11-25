@@ -9,10 +9,13 @@
 #import "SUAppDelegate.h"
 
 @implementation SUAppDelegate
-
+@synthesize addictionModel = _addictionModel;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    self.addictionModel = [[AddictionModel alloc] init];
+    
     return YES;
 }
 							
