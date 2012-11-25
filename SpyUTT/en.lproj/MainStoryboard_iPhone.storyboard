@@ -163,6 +163,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="02U-ch-cDw" kind="push" identifier="SUShowIHasApp" id="HP4-al-Qoz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="iHasApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d0W-nc-GcW">
                                 <rect key="frame" x="123" y="308" width="74" height="27"/>
@@ -1547,7 +1550,49 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bE-Uu-HxX" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1683" y="954"/>
+            <point key="canvasLocation" x="-1659" y="2218"/>
+        </scene>
+        <!--Second View Controller - Second-->
+        <scene sceneID="KGV-T0-ekO">
+            <objects>
+                <viewController title="Second" id="02U-ch-cDw" customClass="PROCSecondViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" id="0HT-nk-wcX">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AppCell" rowHeight="68" id="nCw-9p-tJb" customClass="AppCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="ffG-MX-qCn">
+                                            <rect key="frame" x="0.0" y="0.0" width="67" height="67"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vPr-Aj-NEZ">
+                                            <rect key="frame" x="75" y="23" width="223" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="iconImg" destination="ffG-MX-qCn" id="saj-PS-Xpp"/>
+                                    <outlet property="name" destination="vPr-Aj-NEZ" id="oPl-3K-8wk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Second" image="second" id="Vwl-T2-jjR"/>
+                    <navigationItem key="navigationItem" title="IHasApp" id="Zny-Rr-4gt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KuY-If-43T" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-955" y="1934"/>
         </scene>
     </scenes>
     <resources>
@@ -1565,6 +1610,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="check_mark.jpeg" width="16" height="16"/>
         <image name="first" width="16" height="16"/>
         <image name="iHasApp.png" width="64" height="64"/>
+        <image name="second" width="16" height="16"/>
         <image name="up.png" width="48" height="24"/>
     </resources>
     <classes>
@@ -1588,6 +1634,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ABDMasterViewController.h"/>
             <relationships>
                 <relationship kind="action" name="sendContacts:" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="AppCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AppCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="iconImg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="CalCalendarCell" superclassName="UITableViewCell">
@@ -1639,15 +1692,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="name" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="note" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="pid" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="procIcon" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="status" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="time" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="type" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="typeColor" candidateClass="UIView"/>
             </relationships>
         </class>
         <class className="PROCFirstViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PROCFirstViewController.h"/>
+        </class>
+        <class className="PROCSecondViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PROCSecondViewController.h"/>
         </class>
         <class className="RemDetailViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RemDetailViewController.h"/>

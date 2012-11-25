@@ -25,6 +25,10 @@
 		BC25C453166276F4002C7F31 /* PTDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C452166276F4002C7F31 /* PTDevice.m */; };
 		BC25C45716627943002C7F31 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC25C45616627943002C7F31 /* SDWebImage.framework */; };
 		BC25C45916627960002C7F31 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC25C45816627960002C7F31 /* ImageIO.framework */; };
+		BC25C45E16627AD5002C7F31 /* iHasApp.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C45C16627AD5002C7F31 /* iHasApp.m */; };
+		BC25C45F16627AD5002C7F31 /* schemeApps.json in Resources */ = {isa = PBXBuildFile; fileRef = BC25C45D16627AD5002C7F31 /* schemeApps.json */; };
+		BC25C46416627B2F002C7F31 /* AppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C46116627B2F002C7F31 /* AppCell.m */; };
+		BC25C46516627B2F002C7F31 /* PROCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C46316627B2F002C7F31 /* PROCSecondViewController.m */; };
 		BC780F56165FEA8300D5FCB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F55165FEA8300D5FCB2 /* UIKit.framework */; };
 		BC780F58165FEA8300D5FCB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F57165FEA8300D5FCB2 /* Foundation.framework */; };
 		BC780F5A165FEA8300D5FCB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F59165FEA8300D5FCB2 /* CoreGraphics.framework */; };
@@ -107,6 +111,13 @@
 		BC25C452166276F4002C7F31 /* PTDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDevice.m; sourceTree = "<group>"; };
 		BC25C45616627943002C7F31 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		BC25C45816627960002C7F31 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		BC25C45B16627AD5002C7F31 /* iHasApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iHasApp.h; sourceTree = "<group>"; };
+		BC25C45C16627AD5002C7F31 /* iHasApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iHasApp.m; sourceTree = "<group>"; };
+		BC25C45D16627AD5002C7F31 /* schemeApps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schemeApps.json; sourceTree = "<group>"; };
+		BC25C46016627B2F002C7F31 /* AppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCell.h; sourceTree = "<group>"; };
+		BC25C46116627B2F002C7F31 /* AppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCell.m; sourceTree = "<group>"; };
+		BC25C46216627B2F002C7F31 /* PROCSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROCSecondViewController.h; sourceTree = "<group>"; };
+		BC25C46316627B2F002C7F31 /* PROCSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROCSecondViewController.m; sourceTree = "<group>"; };
 		BC780F51165FEA8300D5FCB2 /* SpyUTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpyUTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC780F55165FEA8300D5FCB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BC780F57165FEA8300D5FCB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -214,6 +225,10 @@
 		BC25C43D1662648C002C7F31 /* iHasAppFiles */ = {
 			isa = PBXGroup;
 			children = (
+				BC25C46016627B2F002C7F31 /* AppCell.h */,
+				BC25C46116627B2F002C7F31 /* AppCell.m */,
+				BC25C46216627B2F002C7F31 /* PROCSecondViewController.h */,
+				BC25C46316627B2F002C7F31 /* PROCSecondViewController.m */,
 				BC25C43F166264A0002C7F31 /* iHasApp.png */,
 			);
 			name = iHasAppFiles;
@@ -239,6 +254,17 @@
 				BC25C44516626545002C7F31 /* Addiction.png */,
 			);
 			name = AppAddiction;
+			sourceTree = "<group>";
+		};
+		BC25C45A16627AD5002C7F31 /* iHasApp */ = {
+			isa = PBXGroup;
+			children = (
+				BC25C45B16627AD5002C7F31 /* iHasApp.h */,
+				BC25C45C16627AD5002C7F31 /* iHasApp.m */,
+				BC25C45D16627AD5002C7F31 /* schemeApps.json */,
+			);
+			name = iHasApp;
+			path = ../iHasApp;
 			sourceTree = "<group>";
 		};
 		BC780F46165FEA8300D5FCB2 = {
@@ -279,6 +305,7 @@
 		BC780F5B165FEA8300D5FCB2 /* SpyUTT */ = {
 			isa = PBXGroup;
 			children = (
+				BC25C45A16627AD5002C7F31 /* iHasApp */,
 				BC25C442166264BD002C7F31 /* AppAddiction */,
 				BC25C441166264B6002C7F31 /* SpyProc */,
 				BC25C43D1662648C002C7F31 /* iHasAppFiles */,
@@ -501,6 +528,7 @@
 				BC25C440166264A0002C7F31 /* iHasApp.png in Resources */,
 				BC25C4441662651A002C7F31 /* SpyProc.png in Resources */,
 				BC25C44616626545002C7F31 /* Addiction.png in Resources */,
+				BC25C45F16627AD5002C7F31 /* schemeApps.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +577,9 @@
 				BC25C44D16627630002C7F31 /* PROCFirstViewController.m in Sources */,
 				BC25C45016627698002C7F31 /* PROCCell.m in Sources */,
 				BC25C453166276F4002C7F31 /* PTDevice.m in Sources */,
+				BC25C45E16627AD5002C7F31 /* iHasApp.m in Sources */,
+				BC25C46416627B2F002C7F31 /* AppCell.m in Sources */,
+				BC25C46516627B2F002C7F31 /* PROCSecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
