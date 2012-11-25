@@ -23,6 +23,8 @@
 		BC25C44D16627630002C7F31 /* PROCFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C44C16627630002C7F31 /* PROCFirstViewController.m */; };
 		BC25C45016627698002C7F31 /* PROCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C44F16627698002C7F31 /* PROCCell.m */; };
 		BC25C453166276F4002C7F31 /* PTDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C452166276F4002C7F31 /* PTDevice.m */; };
+		BC25C45716627943002C7F31 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC25C45616627943002C7F31 /* SDWebImage.framework */; };
+		BC25C45916627960002C7F31 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC25C45816627960002C7F31 /* ImageIO.framework */; };
 		BC780F56165FEA8300D5FCB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F55165FEA8300D5FCB2 /* UIKit.framework */; };
 		BC780F58165FEA8300D5FCB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F57165FEA8300D5FCB2 /* Foundation.framework */; };
 		BC780F5A165FEA8300D5FCB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC780F59165FEA8300D5FCB2 /* CoreGraphics.framework */; };
@@ -103,6 +105,8 @@
 		BC25C44F16627698002C7F31 /* PROCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROCCell.m; sourceTree = "<group>"; };
 		BC25C451166276F4002C7F31 /* PTDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDevice.h; sourceTree = "<group>"; };
 		BC25C452166276F4002C7F31 /* PTDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDevice.m; sourceTree = "<group>"; };
+		BC25C45616627943002C7F31 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
+		BC25C45816627960002C7F31 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		BC780F51165FEA8300D5FCB2 /* SpyUTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpyUTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC780F55165FEA8300D5FCB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BC780F57165FEA8300D5FCB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -190,6 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC25C45916627960002C7F31 /* ImageIO.framework in Frameworks */,
 				BC25C43016624FFD002C7F31 /* AssetsLibrary.framework in Frameworks */,
 				BC78106B1660311C00D5FCB2 /* EventKit.framework in Frameworks */,
 				BC781014166029B900D5FCB2 /* CoreData.framework in Frameworks */,
@@ -199,6 +204,7 @@
 				BC780F56165FEA8300D5FCB2 /* UIKit.framework in Frameworks */,
 				BC780F58165FEA8300D5FCB2 /* Foundation.framework in Frameworks */,
 				BC780F5A165FEA8300D5FCB2 /* CoreGraphics.framework in Frameworks */,
+				BC25C45716627943002C7F31 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +244,8 @@
 		BC780F46165FEA8300D5FCB2 = {
 			isa = PBXGroup;
 			children = (
+				BC25C45816627960002C7F31 /* ImageIO.framework */,
+				BC25C45616627943002C7F31 /* SDWebImage.framework */,
 				BC25C42F16624FFD002C7F31 /* AssetsLibrary.framework */,
 				BC78106A1660311C00D5FCB2 /* EventKit.framework */,
 				BC781013166029B900D5FCB2 /* CoreData.framework */,
@@ -629,9 +637,18 @@
 		BC780F79165FEA8400D5FCB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpyUTT/SpyUTT-Prefix.pch";
 				INFOPLIST_FILE = "SpyUTT/SpyUTT-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SpyUTT\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -640,9 +657,18 @@
 		BC780F7A165FEA8400D5FCB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpyUTT/SpyUTT-Prefix.pch";
 				INFOPLIST_FILE = "SpyUTT/SpyUTT-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SpyUTT\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
