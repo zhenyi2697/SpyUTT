@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnail;
 @property (weak, nonatomic) IBOutlet UILabel *imageName;
 @property (weak, nonatomic) IBOutlet UILabel *imageDate;
-
+@property (strong, nonatomic) IBOutlet UILabel *coordinateLabel;
+@property (strong, nonatomic) IBOutlet UILabel *sizeLabel;
 @end

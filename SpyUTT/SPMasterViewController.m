@@ -14,7 +14,6 @@
 #import "SPAllDetailsViewController.h"
 
 @interface SPMasterViewController ()
-@property (nonatomic,strong) NSDictionary *photoGPSInfoDic;
 @property (nonatomic,strong) UIProgressView *progressView;
 @end
 
@@ -95,7 +94,29 @@
     NSDate *imageDate = [asset valueForProperty:ALAssetPropertyDate];
     
     cell.imageDate.text = [formatter stringFromDate:imageDate];
+    
+    //image size
+    long long size = [[asset defaultRepresentation] size];
+    float sizeInFloat = (long double)size/(1024 * 1024);
+    cell.sizeLabel.text = [NSString stringWithFormat:@"%.2f MB",sizeInFloat];
+    
+    //image coordinate
+    NSString *coordinatStringValue = @"None";
+    NSString *indexInString = [NSString stringWithFormat:@"%d",indexPath.row];
+    NSDictionary *coordinateDic = [self.photoLibraryController.photoGPSInfoDic objectForKey:indexInString];
+    if (coordinateDic) {
+        coordinatStringValue = [self getCoordinateStringFromGPSInfo:coordinateDic];
+    }
+    
+    cell.coordinateLabel.text = coordinatStringValue;
+    
     return cell;
+}
+
+-(NSString *)getCoordinateStringFromGPSInfo:(NSDictionary *)gpsInfo
+{
+    NSString *value = [NSString stringWithFormat:@"%.6f, %.6f",[(NSNumber *)[gpsInfo objectForKey:@"Latitude"] doubleValue],[(NSNumber *)[gpsInfo objectForKey:@"Longitude"] doubleValue]];
+    return value;
 }
 
 -(NSArray *)photoAnnotationsWithGPSInfo:(NSDictionary *)GPSInfoDic
