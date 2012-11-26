@@ -116,6 +116,7 @@
 		BC78108A166034F800D5FCB2 /* RemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781086166034F800D5FCB2 /* RemModel.m */; };
 		BCCC9BBD1663773D008F1B62 /* arrow_left_white.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCC9BBB1663773D008F1B62 /* arrow_left_white.png */; };
 		BCCC9BBE1663773D008F1B62 /* arrow_right_white.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCC9BBC1663773D008F1B62 /* arrow_right_white.png */; };
+		BCCC9BD21663CC55008F1B62 /* SUAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCC9BD11663CC55008F1B62 /* SUAboutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -281,6 +282,8 @@
 		BC781086166034F800D5FCB2 /* RemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemModel.m; sourceTree = "<group>"; };
 		BCCC9BBB1663773D008F1B62 /* arrow_left_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left_white.png; sourceTree = "<group>"; };
 		BCCC9BBC1663773D008F1B62 /* arrow_right_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right_white.png; sourceTree = "<group>"; };
+		BCCC9BD01663CC55008F1B62 /* SUAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUAboutViewController.h; sourceTree = "<group>"; };
+		BCCC9BD11663CC55008F1B62 /* SUAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUAboutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -468,6 +471,8 @@
 				BC780FD91660233900D5FCB2 /* SpyDevice */,
 				BC780FBB16601F5300D5FCB2 /* SpyContact */,
 				BC780F6D165FEA8400D5FCB2 /* MainStoryboard_iPhone.storyboard */,
+				BCCC9BD01663CC55008F1B62 /* SUAboutViewController.h */,
+				BCCC9BD11663CC55008F1B62 /* SUAboutViewController.m */,
 				BC780F7B165FEAF000D5FCB2 /* SULauncherViewController.h */,
 				BC780F7C165FEAF000D5FCB2 /* SULauncherViewController.m */,
 				BC780F5C165FEA8300D5FCB2 /* Supporting Files */,
@@ -762,6 +767,7 @@
 				BC69C99616627FFA0081B302 /* PROCThirdViewController.m in Sources */,
 				BC69C99716627FFA0081B302 /* SBTrack.m in Sources */,
 				BC69C99816627FFA0081B302 /* SBTrack+CreateTrack.m in Sources */,
+				BCCC9BD21663CC55008F1B62 /* SUAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

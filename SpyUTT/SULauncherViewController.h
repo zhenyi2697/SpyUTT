@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SULauncherViewController : UIViewController
+- (IBAction)showInfo:(UIButton *)sender;
 
 @end
