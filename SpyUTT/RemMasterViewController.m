@@ -86,4 +86,12 @@
     }
 }
 
+-(void)remModelAccessHasBeenGranted
+{
+    NSLog(@"in call back");
+    objects = [self.model retrieveAllRemindersLists];
+    [self.tableView reloadData];
+
+}
+
 @end

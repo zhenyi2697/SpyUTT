@@ -16,7 +16,31 @@
 @end
 
 @implementation RemModel
+@synthesize delegate = _delegate;
 
+- (id)initWithDelegate:(id)delegate
+{
+    self = [super init];
+    self.delegate = delegate;
+    store = [[EKEventStore alloc] init];
+    if([EKEventStore authorizationStatusForEntityType:EKEntityTypeReminder] ==EKAuthorizationStatusNotDetermined){
+        [store requestAccessToEntityType:EKEntityTypeReminder completion:^(BOOL granted, NSError *error) {
+            NSLog(@"in request access...");
+            store = [[EKEventStore alloc] init];
+            [self.delegate remModelAccessHasBeenGranted];
+        }];
+    }else{
+        
+    }
+    
+    if (formatter == nil) {
+        formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateStyle:NSDateFormatterMediumStyle];
+        [formatter setTimeStyle:NSDateFormatterMediumStyle];
+    }
+    
+    return self;
+}
 
 - (id)init
 {

@@ -50,6 +50,12 @@
     dateBegin = [myCalendar dateFromComponents:components];
     //self.fromLabel.text = [formatter stringFromDate:dateBegin];
     dateEnd = [dateBegin dateByAddingTimeInterval: +86400.0];
+    
+    //init model when first in
+    if (!self.model) {
+        self.model = [[CalModel alloc]init];
+    }
+    
     //self.toLabel.text = [formatter stringFromDate:dateEnd];
 }
 

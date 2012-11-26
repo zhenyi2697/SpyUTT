@@ -9,12 +9,22 @@
 #import <Foundation/Foundation.h>
 #import <EventKit/EventKit.h>
 
+@protocol RemModelDelegate <NSObject>
+
+-(void)remModelAccessHasBeenGranted;
+
+@end
+
 @interface RemModel : NSObject
+
+@property (strong,nonatomic) id delegate;
 
 - (NSArray *)retrieveAllRemindersLists;
 - (void)retrieveRemindersFromList:(EKCalendar *)cal withCompletion:(void (^)(NSArray *))completion;
 - (void)sendReminders:(NSArray *)reminders WithCallback:(void (^)(void))callback;
 //- (NSArray *)retrieveRemindersFromCalendar:(EKCalendar *)calendar;
 //@property (nonatomic, strong) NSArray *currentReminders;
+
+- (id)initWithDelegate:(id)delegate;
 
 @end

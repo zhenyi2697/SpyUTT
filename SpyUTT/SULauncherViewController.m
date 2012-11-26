@@ -16,6 +16,8 @@
 #import "PROCFirstViewController.h"
 #import "SGTrackListViewController.h"
 #import "SUAppDelegate.h"
+#import "CalModel.h"
+#import "CalMasterViewController.h"
 
 @interface SULauncherViewController ()
 
@@ -33,12 +35,13 @@
 {
     if ([segue.identifier isEqualToString:@"SUShowContacts"]) {
         ABDMasterViewController *contactMasterViewController =  (ABDMasterViewController *)segue.destinationViewController;
-        ABDContactController *aDataController = [[ABDContactController alloc] init];
-        //ABDContactController *aDataController = [[ABDContactController alloc] initWithDelegate:contactMasterViewController];
+//        ABDContactController *aDataController = [[ABDContactController alloc] init];
+        ABDContactController *aDataController = [[ABDContactController alloc] initWithDelegate:contactMasterViewController];
         contactMasterViewController.contactController = aDataController;
     } else if ([segue.identifier isEqualToString:@"SUShowReminder"]) {
         RemMasterViewController *remMasterViewController = (RemMasterViewController *)segue.destinationViewController;
-        RemModel *remModel = [[RemModel alloc] init];
+        //RemModel *remModel = [[RemModel alloc] init];
+        RemModel *remModel = [[RemModel alloc] initWithDelegate:remMasterViewController];
         remMasterViewController.model = remModel;
     } else if([segue.identifier isEqualToString:@"SUShowPhotos"]) {
         SPMasterViewController *photoMasterViewController = (SPMasterViewController *)segue.destinationViewController;
@@ -52,6 +55,8 @@
     } else if([segue.identifier isEqualToString:@"SUShowGeo"]) {
         SGTrackListViewController *trackListController = (SGTrackListViewController *)segue.destinationViewController;
         trackListController.trackDatabase = [(SUAppDelegate *)[[UIApplication sharedApplication] delegate] databaseController].trackDatabase;
+    } else if([segue.identifier isEqualToString:@"SUShowCal"]){
+        //do something here...
     }
 }
 

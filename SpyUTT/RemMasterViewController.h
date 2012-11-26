@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RemModel.h"
 
-@interface RemMasterViewController : UITableViewController
+@interface RemMasterViewController : UITableViewController <RemModelDelegate>
 
 @property (nonatomic) RemModel *model;
 @property (nonatomic) UINavigationController *navControl;
