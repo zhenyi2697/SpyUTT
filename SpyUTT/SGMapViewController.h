@@ -11,4 +11,7 @@
 
 @interface SGMapViewController : UIViewController
 @property (nonatomic,strong) NSArray *annotations;  // of id <MKAnnotation>
+- (IBAction)previousLocation:(UIButton *)sender;
+- (IBAction)nextLocation:(id)sender;
+
 @end

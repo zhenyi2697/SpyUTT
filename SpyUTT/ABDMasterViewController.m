@@ -274,4 +274,9 @@
     return UIInterfaceOrientationIsPortrait(interfaceOrientation);
 }
 
+- (void)contactControllerAccessHasBeenGranted
+{
+    [self.tableView reloadData];
+}
+
 @end

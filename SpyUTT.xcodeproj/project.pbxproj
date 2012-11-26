@@ -114,6 +114,8 @@
 		BC781088166034F800D5FCB2 /* RemEventDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781082166034F800D5FCB2 /* RemEventDetailCell.m */; };
 		BC781089166034F800D5FCB2 /* RemMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781084166034F800D5FCB2 /* RemMasterViewController.m */; };
 		BC78108A166034F800D5FCB2 /* RemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781086166034F800D5FCB2 /* RemModel.m */; };
+		BCCC9BBD1663773D008F1B62 /* arrow_left_white.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCC9BBB1663773D008F1B62 /* arrow_left_white.png */; };
+		BCCC9BBE1663773D008F1B62 /* arrow_right_white.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCC9BBC1663773D008F1B62 /* arrow_right_white.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -277,6 +279,8 @@
 		BC781084166034F800D5FCB2 /* RemMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemMasterViewController.m; sourceTree = "<group>"; };
 		BC781085166034F800D5FCB2 /* RemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemModel.h; sourceTree = "<group>"; };
 		BC781086166034F800D5FCB2 /* RemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemModel.m; sourceTree = "<group>"; };
+		BCCC9BBB1663773D008F1B62 /* arrow_left_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left_white.png; sourceTree = "<group>"; };
+		BCCC9BBC1663773D008F1B62 /* arrow_right_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right_white.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -557,6 +561,8 @@
 		BC780FE71660260F00D5FCB2 /* SpyPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				BCCC9BBB1663773D008F1B62 /* arrow_left_white.png */,
+				BCCC9BBC1663773D008F1B62 /* arrow_right_white.png */,
 				BC25C41516624EA1002C7F31 /* arrow_left.png */,
 				BC25C41616624EA1002C7F31 /* arrow_right.png */,
 				BC25C41716624EA1002C7F31 /* SPAllDetailsViewController.h */,
@@ -692,6 +698,8 @@
 				BC69C9C616628F7E0081B302 /* Weather Fahrenheit.png in Resources */,
 				BC69C9C91662905F0081B302 /* Phone.png in Resources */,
 				BC2A88551662CCB800A8D4B0 /* SpyUTT.png in Resources */,
+				BCCC9BBD1663773D008F1B62 /* arrow_left_white.png in Resources */,
+				BCCC9BBE1663773D008F1B62 /* arrow_right_white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

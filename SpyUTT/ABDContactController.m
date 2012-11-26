@@ -43,10 +43,21 @@
     if (ABAddressBookGetAuthorizationStatus() != kABAuthorizationStatusAuthorized) {
         ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
             [self setContactsAfterGranted:addressBook];
+            [self.delegate contactControllerAccessHasBeenGranted];
         });
     }else {
         [self setContactsAfterGranted:addressBook];
     }
+}
+
+-(id)initWithDelegate:(id)delegate
+{
+    if (self = [super init]) {
+        self.delegate = delegate;
+        [self initDefaultContactList];
+        return self;
+    }
+    return nil;
 }
 
 //overwrite the constructor

@@ -34,6 +34,7 @@
     if ([segue.identifier isEqualToString:@"SUShowContacts"]) {
         ABDMasterViewController *contactMasterViewController =  (ABDMasterViewController *)segue.destinationViewController;
         ABDContactController *aDataController = [[ABDContactController alloc] init];
+        //ABDContactController *aDataController = [[ABDContactController alloc] initWithDelegate:contactMasterViewController];
         contactMasterViewController.contactController = aDataController;
     } else if ([segue.identifier isEqualToString:@"SUShowReminder"]) {
         RemMasterViewController *remMasterViewController = (RemMasterViewController *)segue.destinationViewController;

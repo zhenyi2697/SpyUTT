@@ -12,7 +12,7 @@
 #import "ABDContactController.h"
 #import "ABDContentCell.h"
 
-@interface ABDMasterViewController : UITableViewController 
+@interface ABDMasterViewController : UITableViewController <ABDContactControllerDelegate>
 
 @property (strong, nonatomic) ABDContactController *contactController;
 - (IBAction)sendContacts:(UIBarButtonItem *)sender;

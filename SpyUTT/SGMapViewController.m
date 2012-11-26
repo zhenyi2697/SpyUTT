@@ -11,6 +11,7 @@
 
 @interface SGMapViewController () <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) SGLocationAnnotation *currentAnnotation;
 @end
 
 @implementation SGMapViewController
@@ -37,22 +38,30 @@
     [self updateMapView];
 }
 
-#pragma mark - UIView delegate methods
-- (void)viewDidLoad
+- (void)centerToAnnotation:(SGLocationAnnotation *)annotation
 {
-    [super viewDidLoad];
-    SGLocationAnnotation *annotation = [self.annotations lastObject];
     Location *centerLocation = annotation.location;
     CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake([centerLocation.latitude doubleValue], [centerLocation.longitude doubleValue]);
     MKCoordinateSpan span = MKCoordinateSpanMake(0.05f, 0.05f);
     MKCoordinateRegion region = {centerCoordinate, span};
     region.center = centerCoordinate;
     region.span = span;
-    
+
     [self.mapView setRegion:region animated:YES];
-    [self updateMapView];
-    //[self.mapView setCenterCoordinate:centerCoordinate animated:YES];
-    //[self.mapView regionThatFits:region];
+    [self.mapView setCenterCoordinate:centerCoordinate animated:YES];
+    //[self updateMapView];
+    
+    [self.mapView selectAnnotation:annotation animated:YES];
+    self.currentAnnotation = annotation;
+}
+
+#pragma mark - UIView delegate methods
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    SGLocationAnnotation *annotation = [self.annotations lastObject];
+    
+    [self centerToAnnotation:annotation];
     
 }
 
@@ -61,7 +70,6 @@
     [self.mapView removeFromSuperview]; // release crashes app
     self.mapView = nil;
 }
-
 
 //允许屏幕旋转
 - (BOOL)shouldAutorotate
@@ -95,4 +103,27 @@
     });*/
 }
 
+- (IBAction)previousLocation:(UIButton *)sender {
+    int currentIndex = [self.annotations indexOfObject:self.currentAnnotation];
+    int nextIndex = 0;
+    if ((currentIndex - 1) >= 0) {
+        nextIndex = currentIndex - 1;
+    } else {
+        nextIndex = [self.annotations count] - 1;
+    }
+    
+    SGLocationAnnotation *annotation = [self.annotations objectAtIndex:nextIndex];
+    [self centerToAnnotation:annotation];
+}
+
+- (IBAction)nextLocation:(id)sender {
+    int currentIndex = [self.annotations indexOfObject:self.currentAnnotation];
+    int nextIndex = 0;
+    if ((currentIndex + 1) < ([self.annotations count])) {
+        nextIndex = currentIndex + 1;
+    }
+    
+    SGLocationAnnotation *annotation = [self.annotations objectAtIndex:nextIndex];
+    [self centerToAnnotation:annotation];
+}
 @end

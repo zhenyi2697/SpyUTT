@@ -41,6 +41,7 @@
     region.span = span;
     
     [self.mapView setRegion:region animated:YES];
+    [self.mapView setCenterCoordinate:centerCoordinate animated:YES];
     //[self updateMapView];
     
     [self.mapView selectAnnotation:annotation animated:YES];

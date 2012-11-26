@@ -9,11 +9,21 @@
 #import <Foundation/Foundation.h>
 #import <AddressBook/AddressBook.h>
 
+@protocol ABDContactControllerDelegate <NSObject>
+
+- (void)contactControllerAccessHasBeenGranted;
+
+@end
+
 @interface ABDContactController : NSObject
 
 @property (nonatomic, copy) NSMutableArray *contactList;
 @property (nonatomic) CFArrayRef allPeople;
 @property (nonatomic) int nPeople;
+
+@property (nonatomic,strong) id delegate;
+
+-(id)initWithDelegate:(id)delegate;
 
 - (NSUInteger)countOfList;
 - (NSString *)objectInListAtIndex:(NSUInteger)theIndex;
