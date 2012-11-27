@@ -41,13 +41,13 @@
     return _locationManager;
 }
 
-#define LOCATION_CHANGED_THRESHELD 0.0005  //0.0005
+#define LOCATION_CHANGED_THRESHELD 0.000  //0.0005
 
 - (BOOL)locationHasChanged
 {
     double latitudeDifference = fabs(self.currentCoordinate.latitude - self.lastCoordinate.latitude);
     double longitudeDifference = fabs(self.currentCoordinate.longitude - self.lastCoordinate.longitude);
-    NSLog(@"latitudeDifference: %f and longitudeDifference: %f",latitudeDifference,longitudeDifference);
+    //NSLog(@"latitudeDifference: %f and longitudeDifference: %f",latitudeDifference,longitudeDifference);
     if (latitudeDifference < LOCATION_CHANGED_THRESHELD &&
         longitudeDifference < LOCATION_CHANGED_THRESHELD) {
         return NO;
@@ -231,7 +231,7 @@
     //[self.locationManager stopMonitoringSignificantLocationChanges];
     [self.trackTimer invalidate];
     [self resetFlagCoordinates];
-    NSLog(@"tracking stopped....");
+    //NSLog(@"tracking stopped....");
 }
 
 -(void)saveLocationToDatabaseWithCoordinate:(CLLocationCoordinate2D) coordinate
@@ -241,19 +241,26 @@
     //then, update self.lastCoordinate and self.currentCoordinate
     self.lastCoordinate = coordinate;
     
-    NSLog(@"save to database %f %f",coordinate.latitude, coordinate.longitude);
+    //NSLog(@"save to database %f %f",coordinate.latitude, coordinate.longitude);
 }
 
 -(void)track
 {
-    //NSLog(@"currentLocation: %f %f",self.currentCoordinate.longitude, self.currentCoordinate.latitude);
-    //NSLog(@"currentLocation: %f %f",self.lastCoordinate.longitude, self.lastCoordinate.latitude);
+    NSLog(@"Time remaining... %f",[[UIApplication sharedApplication] backgroundTimeRemaining]);
+    double timeRemaining = [[UIApplication sharedApplication] backgroundTimeRemaining];
+    int locationUpdateInterval = [self.currentTrack.interval doubleValue] * 60;
+    
+    if (locationUpdateInterval > timeRemaining) {
+        [self.locationManager stopUpdatingLocation];
+        [self.locationManager startUpdatingLocation];
+    }
+    
     if ([self locationHasChanged]) {
-        NSLog(@"location has changed, store in database");
+        //NSLog(@"location has changed, store in database");
         CLLocationCoordinate2D coordinate = self.currentCoordinate;
         [self saveLocationToDatabaseWithCoordinate:coordinate];
     } else {
-        NSLog(@"location has not changed, do nothing...");
+        //NSLog(@"location has not changed, do nothing...");
     }
 }
 
@@ -310,7 +317,7 @@
 {
     CLLocation *newLocation = [locations objectAtIndex:0];
     self.currentCoordinate = newLocation.coordinate;
-    NSLog(@"in didUpdateLocation: %@",[newLocation description]);
+    //NSLog(@"in didUpdateLocation: %@",[newLocation description]);
     if ([self.currentTrack.type isEqualToString:TRACK_TYPE_AUTO] && [self locationHasChanged]) {
         [self saveLocationToDatabaseWithCoordinate:newLocation.coordinate];
     } else if([self.currentTrack.type isEqualToString:TRACK_TYPE_TIMER] && self.lastCoordinate.latitude == 0 && self.lastCoordinate.longitude == 0) { // store the very first data into database
