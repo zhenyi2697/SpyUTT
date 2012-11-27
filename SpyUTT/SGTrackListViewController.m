@@ -41,7 +41,7 @@
     return _locationManager;
 }
 
-#define LOCATION_CHANGED_THRESHELD 0.000  //0.0005
+#define LOCATION_CHANGED_THRESHELD 0.0005  //0.0005
 
 - (BOOL)locationHasChanged
 {

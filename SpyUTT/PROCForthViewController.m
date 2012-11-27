@@ -19,14 +19,33 @@
     PROCAppDetection *appDetection;
     NSTimer *theTimer;
 }
+#define ADDICTION_CHECKING_INTERVAL 2
+@property (nonatomic,strong) CLLocationManager *locationManager;
 @end
 
 @implementation PROCForthViewController
 
 @synthesize result = _result;
+@synthesize locationManager = _locationManager;
+
+-(CLLocationManager *)locationManager
+{
+    if (!_locationManager) {
+        CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+        locationManager.distanceFilter = kCLDistanceFilterNone;
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+        locationManager.delegate = self;
+        _locationManager = locationManager;
+    }
+    return _locationManager;
+}
 
 - (void)saveTrack
 {
+    if ([[UIApplication sharedApplication] backgroundTimeRemaining] < ADDICTION_CHECKING_INTERVAL) {
+        [self.locationManager stopUpdatingLocation];
+        [self.locationManager startUpdatingLocation];
+    }
     [model saveTrack];
 }
 
@@ -37,12 +56,14 @@
     model = [(SUAppDelegate *)[[UIApplication sharedApplication] delegate] addictionModel];
     self.result = [model retrieveAppsUtilisationTime];
     
+    [self.locationManager startUpdatingLocation];
+    
 	// Do any additional setup after loading the view.
     UIBackgroundTaskIdentifier bgtask;
     bgtask = [[UIApplication sharedApplication]beginBackgroundTaskWithExpirationHandler:^{
         
     }];
-    theTimer=[NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(saveTrack) userInfo:nil repeats:YES];
+    theTimer=[NSTimer scheduledTimerWithTimeInterval:ADDICTION_CHECKING_INTERVAL target:self selector:@selector(saveTrack) userInfo:nil repeats:YES];
 }
 
 -(void)setResult:(NSDictionary *)result
@@ -120,6 +141,12 @@
     }
     
     return cell;
+}
+
+//CLLocationManagerDelegate method
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    //NSLog(@"%@",[[locations objectAtIndex:0] description]);
 }
 
 @end
