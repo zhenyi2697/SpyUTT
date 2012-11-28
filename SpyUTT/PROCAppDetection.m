@@ -141,6 +141,12 @@
     }else if ([bundleId isEqualToString:@"com.apple.mobilephone"]) {
         appIcon = [UIImage imageNamed:@"Phone.png"];
         appName = @"Phone";
+    }else if ([bundleId isEqualToString:@"com.apple.mobileipod"]) {
+        appIcon = [UIImage imageNamed:@"iPod.png"];
+        appName = @"IPod";
+    }else if ([bundleId isEqualToString:@"fr.utt.isi.SpyUTT"]) {
+        appIcon = [UIImage imageNamed:@"SpyUTT.png"];
+        appName = @"SpyUTT";
     }else{
         return nil;
     }

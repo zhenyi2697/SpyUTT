@@ -30,6 +30,7 @@
 		BC25C46416627B2F002C7F31 /* AppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C46116627B2F002C7F31 /* AppCell.m */; };
 		BC25C46516627B2F002C7F31 /* PROCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C46316627B2F002C7F31 /* PROCSecondViewController.m */; };
 		BC2A88551662CCB800A8D4B0 /* SpyUTT.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A88541662CCB800A8D4B0 /* SpyUTT.png */; };
+		BC3B60291665FA480011D527 /* iPod.png in Resources */ = {isa = PBXBuildFile; fileRef = BC3B60281665FA480011D527 /* iPod.png */; };
 		BC69C98E16627FFA0081B302 /* AddictionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69C97916627FFA0081B302 /* AddictionModel.m */; };
 		BC69C98F16627FFA0081B302 /* DCDTrackDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69C97B16627FFA0081B302 /* DCDTrackDataController.m */; };
 		BC69C99016627FFA0081B302 /* PROCAddictionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC69C97D16627FFA0081B302 /* PROCAddictionCell.m */; };
@@ -156,6 +157,7 @@
 		BC25C46216627B2F002C7F31 /* PROCSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PROCSecondViewController.h; sourceTree = "<group>"; };
 		BC25C46316627B2F002C7F31 /* PROCSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PROCSecondViewController.m; sourceTree = "<group>"; };
 		BC2A88541662CCB800A8D4B0 /* SpyUTT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpyUTT.png; sourceTree = "<group>"; };
+		BC3B60281665FA480011D527 /* iPod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPod.png; sourceTree = "<group>"; };
 		BC69C97816627FFA0081B302 /* AddictionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddictionModel.h; sourceTree = "<group>"; };
 		BC69C97916627FFA0081B302 /* AddictionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddictionModel.m; sourceTree = "<group>"; };
 		BC69C97A16627FFA0081B302 /* DCDTrackDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCDTrackDataController.h; sourceTree = "<group>"; };
@@ -483,6 +485,7 @@
 		BC780F5C165FEA8300D5FCB2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BC3B60281665FA480011D527 /* iPod.png */,
 				BC2A88541662CCB800A8D4B0 /* SpyUTT.png */,
 				BC780FC516601FE400D5FCB2 /* background.png */,
 				BC780FC716601FE400D5FCB2 /* up.png */,
@@ -705,6 +708,7 @@
 				BC2A88551662CCB800A8D4B0 /* SpyUTT.png in Resources */,
 				BCCC9BBD1663773D008F1B62 /* arrow_left_white.png in Resources */,
 				BCCC9BBE1663773D008F1B62 /* arrow_right_white.png in Resources */,
+				BC3B60291665FA480011D527 /* iPod.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

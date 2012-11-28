@@ -38,8 +38,9 @@
     NSInteger count = [result count];
     [appsDict setObject:[NSNumber numberWithInteger:count] forKey:@"records"];
     
+    
     for(SBTrack *t in result){
-        if ([t.bundleid isEqualToString:@""] || [@"abcdefghijklmnopqrstuvwxyz" rangeOfString:[t.bundleid substringToIndex:1]].location == NSNotFound){
+        if ([t.bundleid isEqualToString:@""] || [@"abcdefghijklmnopqrstuvwxyz" rangeOfString:[t.bundleid substringToIndex:1]].location == NSNotFound || [t.bundleid rangeOfString:@"."].location == NSNotFound){
             t.bundleid = @"not using";
         }
         if ([appsDict objectForKey:t.bundleid]) {
@@ -64,10 +65,14 @@
     //NSInteger count = [result count];
     //[appsDict setObject:[NSNumber numberWithInteger:count] forKey:@"records"];
     
+    //NSString *wiredString = @"q t h p/! p'&! ";
+    
     for(SBTrack *t in result){
-        if ([t.bundleid isEqualToString:@""] || [@"abcdefghijklmnopqrstuvwxyz" rangeOfString:[t.bundleid substringToIndex:1]].location == NSNotFound){
+        
+        if ([t.bundleid isEqualToString:@""] || [@"abcdefghijklmnopqrstuvwxyz" rangeOfString:[t.bundleid substringToIndex:1]].location == NSNotFound || [t.bundleid rangeOfString:@"."].location == NSNotFound){
             t.bundleid = @"not using";
         }
+        
         if ([appsDict objectForKey:t.bundleid]) {
             NSNumber *value = (NSNumber *)[appsDict objectForKey:t.bundleid];
             NSInteger intValue = value.integerValue + 1;

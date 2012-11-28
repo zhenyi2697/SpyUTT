@@ -2021,7 +2021,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="question-icon.jpg" id="nj3-nX-AIe">
-                                            <rect key="frame" x="0.0" y="0.0" width="64" height="65"/>
+                                            <rect key="frame" x="2" y="2" width="60" height="60"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0tI-6a-a8a">
                                             <rect key="frame" x="72" y="8" width="182" height="21"/>

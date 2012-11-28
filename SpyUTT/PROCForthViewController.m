@@ -19,7 +19,7 @@
     PROCAppDetection *appDetection;
     NSTimer *theTimer;
 }
-#define ADDICTION_CHECKING_INTERVAL 2
+#define ADDICTION_CHECKING_INTERVAL 10
 @property (nonatomic,strong) CLLocationManager *locationManager;
 @end
 
@@ -99,7 +99,7 @@
     
     cell.bundleId.text = app;
     cell.appName.text = app;
-    int percentage = [[self.result objectForKey:app] intValue] * 2;
+    int percentage = [[self.result objectForKey:app] intValue] * ADDICTION_CHECKING_INTERVAL;
     //NSLog(@"app %@ %@",  app, [self.result objectForKey:app]);
     
     NSString *hour;
@@ -113,6 +113,8 @@
     }
     
     cell.percentageLabel.text = hour;
+    
+    cell.appImage.image = [UIImage imageNamed:@"question-icon.jpg"];
     
     //cell.percentageLabel.text = [NSString stringWithFormat:@"%.2f s", percentage];
     

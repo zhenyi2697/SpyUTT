@@ -91,6 +91,8 @@
     cell.percentageBar.progress = percentage / 100;
     cell.percentageLabel.text = [NSString stringWithFormat:@"%.2f %%", percentage];
     
+    cell.appImage.image = [UIImage imageNamed:@"question-icon.jpg"];
+    
     if(!appDetection){
         appDetection = [[PROCAppDetection alloc]init];
     }
