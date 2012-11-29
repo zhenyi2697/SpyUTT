@@ -65,9 +65,9 @@
                   }
               }];
              
+             self.photos = collector;
+             self.photoGPSInfoDic = gpsInfoDic;
              dispatch_async(dispatch_get_main_queue(), ^{
-                 self.photos = collector;
-                 self.photoGPSInfoDic = gpsInfoDic;
                  [self.delegate photoLibraryControllerhasFinishedEnumeratingPhotos:self];
              });
          }
