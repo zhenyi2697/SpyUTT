@@ -28,6 +28,7 @@
     self.scrollView.contentSize = self.imageView.image.size;
     //self.imageView.frame = CGRectMake(0,0,self.imageView.image.size.width,self.imageView.image.size.height);
     self.imageView.frame = CGRectMake(0, 0, 320, 504);
+    
 }
 
 - (void)setPhoto:(ALAsset *)photo
@@ -45,6 +46,12 @@
 	// Do any additional setup after loading the view.
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -53,6 +60,7 @@
 
 - (IBAction)close:(UIBarButtonItem *)sender {
     [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
