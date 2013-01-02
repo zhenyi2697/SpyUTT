@@ -21,7 +21,7 @@
     </entity>
     <elements>
         <element name="Location" positionX="385" positionY="252" width="128" height="103"/>
+        <element name="SBTrack" positionX="432" positionY="45" width="128" height="105"/>
         <element name="Track" positionX="160" positionY="192" width="128" height="118"/>
-        <element name="SBTrack" positionX="432" positionY="72" width="128" height="105"/>
     </elements>
 </model>

@@ -19,7 +19,7 @@
     PROCAppDetection *appDetection;
     NSTimer *theTimer;
 }
-#define ADDICTION_CHECKING_INTERVAL 10
+#define ADDICTION_CHECKING_INTERVAL 2
 @property (nonatomic,strong) CLLocationManager *locationManager;
 @end
 
