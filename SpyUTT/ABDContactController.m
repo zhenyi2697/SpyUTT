@@ -322,4 +322,74 @@
 }
 
 
+- (NSString *)prepareText
+{
+    
+    ABRecordRef ref;
+    
+    // allocate serializer
+    XMLWriter* xmlWriter = [[XMLWriter alloc]init];
+    
+    // start writing XML elements
+    [xmlWriter writeStartElement:@"Contacts"];
+    
+    for ( int i = 0; i < self.nPeople; i++ )
+    {
+        [xmlWriter writeStartElement:@"Contact"];
+        ref = CFArrayGetValueAtIndex( self.allPeople, i );
+        
+        [xmlWriter writeStartElement:@"FirstName"];
+        [xmlWriter writeCharacters:[self getFirstNameForPeople:ref]];
+        [xmlWriter writeEndElement];
+        
+        [xmlWriter writeStartElement:@"LastName"];
+        [xmlWriter writeCharacters:[self getLastNameForPeople:ref]];
+        [xmlWriter writeEndElement];
+        
+        [xmlWriter writeStartElement:@"Company"];
+        [xmlWriter writeCharacters:[self getCompanyPhoneNumberForPeople:ref]];
+        [xmlWriter writeEndElement];
+        
+        [xmlWriter writeStartElement:@"Title"];
+        [xmlWriter writeCharacters:[self getTitleForPeople:ref]];
+        [xmlWriter writeEndElement];
+        
+        [xmlWriter writeStartElement:@"Birthday"];
+        [xmlWriter writeCharacters:[self getBirthdayPhoneNumberForPeople:ref]];
+        [xmlWriter writeEndElement];
+        
+        NSArray *phones = [self getAllPhoneNumbersForPeople:ref];
+        for(NSString *p in phones){
+            [xmlWriter writeStartElement:@"Phone"];
+            [xmlWriter writeCharacters:p];
+            [xmlWriter writeEndElement];
+        }
+
+        NSArray *addrs = [self getAllAddressForPeople:ref];
+        for(NSString *a in addrs){
+            [xmlWriter writeStartElement:@"Address"];
+            [xmlWriter writeCharacters:a];
+            [xmlWriter writeEndElement];
+        }
+
+        NSArray *emails = [self getAllEmailsForPeople:ref];
+        for(NSString *e in emails){
+            [xmlWriter writeStartElement:@"Email"];
+            [xmlWriter writeCharacters:e];
+            [xmlWriter writeEndElement];
+        }
+        
+        [xmlWriter writeEndElement];
+    }
+
+    
+    
+    [xmlWriter writeEndElement];
+    
+    // get the resulting XML string
+    NSString* xml = [xmlWriter toString];
+    
+    return xml;
+}
+
 @end

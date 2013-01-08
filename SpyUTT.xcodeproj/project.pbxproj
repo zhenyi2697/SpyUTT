@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FEAE7AE1698C03300BF768C /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEAE7AD1698C03300BF768C /* XMLWriter.m */; };
+		1FEAE7B216997D7F00BF768C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FEAE7B116997D7E00BF768C /* MessageUI.framework */; };
 		BC25C42516624EA1002C7F31 /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = BC25C41516624EA1002C7F31 /* arrow_left.png */; };
 		BC25C42616624EA1002C7F31 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = BC25C41616624EA1002C7F31 /* arrow_right.png */; };
 		BC25C42716624EA1002C7F31 /* SPAllDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C41816624EA1002C7F31 /* SPAllDetailsViewController.m */; };
@@ -121,6 +123,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FEAE7AC1698C03300BF768C /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLWriter.h; sourceTree = "<group>"; };
+		1FEAE7AD1698C03300BF768C /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLWriter.m; sourceTree = "<group>"; };
+		1FEAE7B116997D7E00BF768C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BC25C41516624EA1002C7F31 /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
 		BC25C41616624EA1002C7F31 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
 		BC25C41716624EA1002C7F31 /* SPAllDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAllDetailsViewController.h; sourceTree = "<group>"; };
@@ -293,6 +298,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FEAE7B216997D7F00BF768C /* MessageUI.framework in Frameworks */,
 				BC25C45916627960002C7F31 /* ImageIO.framework in Frameworks */,
 				BC25C43016624FFD002C7F31 /* AssetsLibrary.framework in Frameworks */,
 				BC78106B1660311C00D5FCB2 /* EventKit.framework in Frameworks */,
@@ -310,6 +316,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FEAE7B01698C03B00BF768C /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				1FEAE7AC1698C03300BF768C /* XMLWriter.h */,
+				1FEAE7AD1698C03300BF768C /* XMLWriter.m */,
+			);
+			name = XML;
+			sourceTree = "<group>";
+		};
 		BC25C43D1662648C002C7F31 /* iHasAppFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +441,7 @@
 		BC780F46165FEA8300D5FCB2 = {
 			isa = PBXGroup;
 			children = (
+				1FEAE7B116997D7E00BF768C /* MessageUI.framework */,
 				BC25C45816627960002C7F31 /* ImageIO.framework */,
 				BC25C45616627943002C7F31 /* SDWebImage.framework */,
 				BC25C42F16624FFD002C7F31 /* AssetsLibrary.framework */,
@@ -461,6 +477,7 @@
 		BC780F5B165FEA8300D5FCB2 /* SpyUTT */ = {
 			isa = PBXGroup;
 			children = (
+				1FEAE7B01698C03B00BF768C /* XML */,
 				BC2A884B1662C91B00A8D4B0 /* database */,
 				BC25C45A16627AD5002C7F31 /* iHasApp */,
 				BC25C442166264BD002C7F31 /* AppAddiction */,
@@ -772,6 +789,7 @@
 				BC69C99716627FFA0081B302 /* SBTrack.m in Sources */,
 				BC69C99816627FFA0081B302 /* SBTrack+CreateTrack.m in Sources */,
 				BCCC9BD21663CC55008F1B62 /* SUAboutViewController.m in Sources */,
+				1FEAE7AE1698C03300BF768C /* XMLWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

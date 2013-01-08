@@ -112,5 +112,24 @@
     return tracks;
 }
 
+-(void)deleteAllTracks
+{
+    NSFetchRequest * allTracks = [[NSFetchRequest alloc] init];
+    NSManagedObjectContext *myContext = self.trackDatabase.managedObjectContext;
+    [allTracks setEntity:[NSEntityDescription entityForName:@"SBTrack" inManagedObjectContext:myContext]];
+    [allTracks setIncludesPropertyValues:NO]; //only fetch the managedObjectID
+    
+    NSError * error = nil;
+    NSArray * tracks = [myContext executeFetchRequest:allTracks error:&error];
+    
+    //error handling goes here
+    for (SBTrack *track in tracks) {
+        [myContext deleteObject:track];
+    }
+    NSError *saveError = nil;
+    [myContext save:&saveError];
+}
+
+
 
 @end

@@ -19,4 +19,8 @@
 
 - (NSDictionary *)retrieveAppsUtilisationTime;
 
+- (void)deleteAll;
+
+- (NSString *)prepareText;
+
 @end

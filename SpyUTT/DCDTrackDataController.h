@@ -17,4 +17,5 @@
 - (void)saveTrack:(NSDictionary *)track;
 - (NSArray *)fetchAllTracks;
 - (NSArray *)fetchAllTracksWithDays:(NSArray *)days WithBeginTime:(NSDate *)beginTime WithEndTime:(NSDate *)endTime;
+-(void)deleteAllTracks;
 @end

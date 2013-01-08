@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AddressBook/AddressBook.h>
+#import "XMLWriter.h"
 
 @protocol ABDContactControllerDelegate <NSObject>
 
@@ -37,4 +38,7 @@
 -(NSString *)getTitleForPeople:(ABRecordRef)thePeople;
 -(NSString *)getCompanyPhoneNumberForPeople:(ABRecordRef)thePeople;
 -(NSString *)getBirthdayPhoneNumberForPeople:(ABRecordRef)thePeople;
+
+- (NSString *)prepareText;
+
 @end

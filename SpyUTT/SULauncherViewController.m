@@ -18,6 +18,10 @@
 #import "SUAppDelegate.h"
 #import "CalModel.h"
 #import "CalMasterViewController.h"
+#import "ABDContactController.h"
+#import "PTDevice.h"
+#import "SDDeviceInfoTableViewController.h"
+#import "iHasApp.h"
 
 @interface SULauncherViewController ()
 
@@ -63,5 +67,94 @@
 
 
 - (IBAction)showInfo:(UIButton *)sender {
+}
+
+
+#import "XMLWriter.h"
+- (IBAction)sendByMail:(id)sender {
+    
+    ABDContactController *contactController = [[ABDContactController alloc]init];
+    NSString *contactsTxt = [contactController prepareText];
+    //NSLog(@"%@",contactsTxt);
+    
+    CalModel *calModel = [[CalModel alloc]init];
+    NSString *calTxt = [calModel prepareText];
+    //NSLog(@"%@", calTxt);
+    
+    RemModel *remModel = [[RemModel alloc]init];
+    NSString *remText = [remModel prepareText];
+    //NSLog(@"%@", remText);
+    
+    UIDevice *device = [[UIDevice alloc]init];
+    NSString *deviceText = [device prepareText];
+    //NSLog(@"%@", deviceText);
+    
+    SDDeviceInfoTableViewController *deviceInfo = [[SDDeviceInfoTableViewController alloc]init];
+    NSString *deviceInfoText = [deviceInfo prepareText];
+    //NSLog(@"%@",deviceInfoText);
+    
+    
+    
+    AddictionModel *addictModel = [(SUAppDelegate *)[[UIApplication sharedApplication] delegate] addictionModel];
+    NSString *addictText = [addictModel prepareText];
+    //NSLog(@"%@", addictText);
+    
+    [[[iHasApp alloc]init] detectAppIdsWithIncremental:^(NSArray *appIds) {
+                
+    } withSuccess:^(NSArray *appIds) {
+        // allocate serializer
+        XMLWriter* xmlWriter = [[XMLWriter alloc]init];
+        
+        // start writing XML elements
+        [xmlWriter writeStartElement:@"IHasApp"];
+        
+        for(NSNumber *appId in appIds){
+            [xmlWriter writeStartElement:@"ID"];
+            [xmlWriter writeCharacters:[NSString stringWithFormat:@"%@", appId]];
+            [xmlWriter writeEndElement];
+        }
+        
+        [xmlWriter writeEndElement];
+        NSString *ihasappText = [xmlWriter toString];
+        //NSLog(@"%@",ihasappText);
+        
+        MFMailComposeViewController *mailCompose = [[MFMailComposeViewController alloc]init];
+        mailCompose.mailComposeDelegate = self;
+        [mailCompose setMessageBody:[NSString stringWithFormat:@"%@\n%@\n%@\n%@\n%@\n%@\n%@", contactsTxt, calTxt, remText, deviceInfoText, deviceText, ihasappText, addictText] isHTML:NO];
+        [mailCompose setSubject:[NSString stringWithFormat: @"TX iphone data : %@", [[NSDate date] description]]];
+        [self presentViewController:mailCompose animated:YES completion:^{
+            
+        }];
+
+    } withFailure:^(NSError *error) {
+        
+    }];
+    
+    
+    
+}
+
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result) {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Cancelled");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Failed");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Saved");
+            break;
+        default :
+            break;
+    }
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 @end
