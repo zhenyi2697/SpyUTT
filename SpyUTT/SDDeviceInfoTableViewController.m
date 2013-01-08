@@ -174,4 +174,68 @@
     }
     [self.tableView reloadData];
 }
+
+- (NSString*)prepareText
+{
+    // allocate serializer
+    XMLWriter* xmlWriter = [[XMLWriter alloc]init];
+    
+    // start writing XML elements
+    [xmlWriter writeStartElement:@"Device"];
+    
+    [xmlWriter writeStartElement:@"Name"];
+    [xmlWriter writeCharacters:[self.currentDevice name]];
+    [xmlWriter writeEndElement];
+    
+    [xmlWriter writeStartElement:@"systemName"];
+    [xmlWriter writeCharacters:[self.currentDevice systemName]];
+    [xmlWriter writeEndElement];
+    
+    [xmlWriter writeStartElement:@"model"];
+    [xmlWriter writeCharacters:[self.currentDevice model]];
+    [xmlWriter writeEndElement];
+    
+    [xmlWriter writeStartElement:@"localizedModel"];
+    [xmlWriter writeCharacters:[self.currentDevice localizedModel]];
+    [xmlWriter writeEndElement];
+    
+    [xmlWriter writeStartElement:@"identifierForVendor"];
+    [xmlWriter writeCharacters:[[self.currentDevice identifierForVendor] UUIDString]];
+    [xmlWriter writeEndElement];
+    
+    [xmlWriter writeStartElement:@"userInterfaceIdiom"];
+    [xmlWriter writeCharacters:[NSString stringWithFormat:@"%d",[self.currentDevice userInterfaceIdiom]]];
+    [xmlWriter writeEndElement];
+    
+    [xmlWriter writeStartElement:@"batteryLevel"];
+    [xmlWriter writeCharacters:[NSString stringWithFormat:@"%.2f",[self.currentDevice batteryLevel]]];
+    [xmlWriter writeEndElement];
+    
+    [xmlWriter writeStartElement:@"isBatteryMonitoringEnabled"];
+    [xmlWriter writeCharacters:[NSString stringWithFormat:@"%d",[self.currentDevice isBatteryMonitoringEnabled]]];
+    [xmlWriter writeEndElement];
+    
+    [xmlWriter writeStartElement:@"isMultitaskingSupported"];
+    [xmlWriter writeCharacters:[NSString stringWithFormat:@"%d",[self.currentDevice isMultitaskingSupported]]];
+    [xmlWriter writeEndElement];
+    
+    [xmlWriter writeStartElement:@"orientation"];
+    [xmlWriter writeCharacters:[NSString stringWithFormat:@"%d",[self.currentDevice orientation]]];
+    [xmlWriter writeEndElement];
+    
+    [xmlWriter writeStartElement:@"proximityState"];
+    [xmlWriter writeCharacters:[NSString stringWithFormat:@"%d",[self.currentDevice proximityState]]];
+    [xmlWriter writeEndElement];
+    
+    [xmlWriter writeStartElement:@"isProximityMonitoringEnabled"];
+    [xmlWriter writeCharacters:[NSString stringWithFormat:@"%d",[self.currentDevice isProximityMonitoringEnabled]]];
+    [xmlWriter writeEndElement];
+    
+    [xmlWriter writeEndElement];
+    
+    // get the resulting XML string
+    NSString* xml = [xmlWriter toString];
+    
+    return xml;
+}
 @end

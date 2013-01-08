@@ -63,7 +63,10 @@
     bgtask = [[UIApplication sharedApplication]beginBackgroundTaskWithExpirationHandler:^{
         
     }];
-    theTimer=[NSTimer scheduledTimerWithTimeInterval:ADDICTION_CHECKING_INTERVAL target:self selector:@selector(saveTrack) userInfo:nil repeats:YES];
+    if (!theTimer) {
+        theTimer=[NSTimer scheduledTimerWithTimeInterval:ADDICTION_CHECKING_INTERVAL target:self selector:@selector(saveTrack) userInfo:nil repeats:NO];
+    }
+    
 }
 
 -(void)setResult:(NSDictionary *)result
@@ -151,4 +154,22 @@
     //NSLog(@"%@",[[locations objectAtIndex:0] description]);
 }
 
+- (IBAction)showActionSheet:(id)sender {
+    UIActionSheet *popup = [[UIActionSheet alloc]initWithTitle:@"Actions" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete All Tracks" otherButtonTitles:@"search", nil];
+    [popup showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 0){
+        [model deleteAll];
+        [self setResult:nil];
+    }else if (buttonIndex == 1){
+        [self performSegueWithIdentifier:@"SearchAddiction" sender:actionSheet];
+    }
+}
+/*- (IBAction)clear:(id)sender {
+    [model deleteAll];
+    [self setResult:nil];
+}*/
 @end

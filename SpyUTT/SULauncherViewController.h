@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface SULauncherViewController : UIViewController
+@interface SULauncherViewController : UIViewController <MFMailComposeViewControllerDelegate>
 - (IBAction)showInfo:(UIButton *)sender;
+- (IBAction)sendByMail:(id)sender;
 
 @end

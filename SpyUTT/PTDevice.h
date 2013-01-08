@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <sys/sysctl.h>
+#import "XMLWriter.h"
 
 @interface UIDevice (ProcessesAdditions)
 
 - (NSDictionary *)runningProcesses;
 - (NSDictionary *) getActiveApps;
+- (NSString *)prepareText;
 
 @end

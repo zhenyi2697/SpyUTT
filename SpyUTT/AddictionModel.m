@@ -87,4 +87,35 @@
     return appsDict;
 }
 
+- (void) deleteAll
+{
+    [dataController deleteAllTracks];
+}
+
+- (NSString *)prepareText
+{
+    /*NSDateFormatter *entireFormatter = [[NSDateFormatter alloc]init];
+    [entireFormatter setDateStyle:NSDateFormatterFullStyle];
+    [entireFormatter setTimeStyle:NSDateFormatterFullStyle];*/
+    
+    NSArray *result = [dataController fetchAllTracks];
+    
+    XMLWriter* xmlWriter = [[XMLWriter alloc]init];
+    [xmlWriter writeStartElement:@"Addictions"];
+    [xmlWriter writeAttribute:@"interval" value:@"2"];
+    
+    for(SBTrack *t in result){
+        [xmlWriter writeStartElement:@"App"];
+        [xmlWriter writeAttribute:@"bundleId" value:t.bundleid];
+        [xmlWriter writeAttribute:@"time" value:t.time.description];
+        [xmlWriter writeEndElement];
+    }
+    
+    [xmlWriter writeEndElement];
+    
+    NSString* xml = [xmlWriter toString];
+    
+    return xml;
+}
+
 @end

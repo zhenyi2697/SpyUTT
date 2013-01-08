@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <EventKit/EventKit.h>
+#import "XMLWriter.h"
 
 @protocol RemModelDelegate <NSObject>
 
@@ -26,5 +27,7 @@
 //@property (nonatomic, strong) NSArray *currentReminders;
 
 - (id)initWithDelegate:(id)delegate;
+
+- (NSString *)prepareText;
 
 @end
