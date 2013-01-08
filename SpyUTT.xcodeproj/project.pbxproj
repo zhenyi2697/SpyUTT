@@ -117,6 +117,7 @@
 		BC781088166034F800D5FCB2 /* RemEventDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781082166034F800D5FCB2 /* RemEventDetailCell.m */; };
 		BC781089166034F800D5FCB2 /* RemMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781084166034F800D5FCB2 /* RemMasterViewController.m */; };
 		BC78108A166034F800D5FCB2 /* RemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC781086166034F800D5FCB2 /* RemModel.m */; };
+		BCAC26F1169C544000370277 /* SGTrackDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAC26F0169C544000370277 /* SGTrackDataReader.m */; };
 		BCCC9BBD1663773D008F1B62 /* arrow_left_white.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCC9BBB1663773D008F1B62 /* arrow_left_white.png */; };
 		BCCC9BBE1663773D008F1B62 /* arrow_right_white.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCC9BBC1663773D008F1B62 /* arrow_right_white.png */; };
 		BCCC9BD21663CC55008F1B62 /* SUAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCC9BD11663CC55008F1B62 /* SUAboutViewController.m */; };
@@ -287,6 +288,8 @@
 		BC781084166034F800D5FCB2 /* RemMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemMasterViewController.m; sourceTree = "<group>"; };
 		BC781085166034F800D5FCB2 /* RemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemModel.h; sourceTree = "<group>"; };
 		BC781086166034F800D5FCB2 /* RemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemModel.m; sourceTree = "<group>"; };
+		BCAC26EF169C544000370277 /* SGTrackDataReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTrackDataReader.h; sourceTree = "<group>"; };
+		BCAC26F0169C544000370277 /* SGTrackDataReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTrackDataReader.m; sourceTree = "<group>"; };
 		BCCC9BBB1663773D008F1B62 /* arrow_left_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left_white.png; sourceTree = "<group>"; };
 		BCCC9BBC1663773D008F1B62 /* arrow_right_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right_white.png; sourceTree = "<group>"; };
 		BCCC9BD01663CC55008F1B62 /* SUAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUAboutViewController.h; sourceTree = "<group>"; };
@@ -623,6 +626,8 @@
 				BC780FFD1660290800D5FCB2 /* SGTrackListViewController.h */,
 				BC780FFE1660290800D5FCB2 /* SGTrackListViewController.m */,
 				BC780FEF1660269400D5FCB2 /* SpyGeo.png */,
+				BCAC26EF169C544000370277 /* SGTrackDataReader.h */,
+				BCAC26F0169C544000370277 /* SGTrackDataReader.m */,
 			);
 			name = SpyGeo;
 			sourceTree = "<group>";
@@ -790,6 +795,7 @@
 				BC69C99816627FFA0081B302 /* SBTrack+CreateTrack.m in Sources */,
 				BCCC9BD21663CC55008F1B62 /* SUAboutViewController.m in Sources */,
 				1FEAE7AE1698C03300BF768C /* XMLWriter.m in Sources */,
+				BCAC26F1169C544000370277 /* SGTrackDataReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

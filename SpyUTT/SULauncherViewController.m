@@ -22,16 +22,21 @@
 #import "PTDevice.h"
 #import "SDDeviceInfoTableViewController.h"
 #import "iHasApp.h"
+#import "SGTrackDataReader.h"
 
 @interface SULauncherViewController ()
-
+@property (nonatomic,strong) SGTrackDataReader *trackDataReader;
 @end
 
 @implementation SULauncherViewController
+@synthesize trackDataReader = _trackDataReader;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if (!self.trackDataReader) {
+        self.trackDataReader = [[SGTrackDataReader alloc] init];
+    }
 	// Do any additional setup after loading the view.
 }
 
@@ -94,6 +99,8 @@
     //NSLog(@"%@",deviceInfoText);
     
     
+    NSString *geoText = [self.trackDataReader prepareText];
+    
     
     AddictionModel *addictModel = [(SUAppDelegate *)[[UIApplication sharedApplication] delegate] addictionModel];
     NSString *addictText = [addictModel prepareText];
@@ -120,7 +127,7 @@
         
         MFMailComposeViewController *mailCompose = [[MFMailComposeViewController alloc]init];
         mailCompose.mailComposeDelegate = self;
-        [mailCompose setMessageBody:[NSString stringWithFormat:@"%@\n%@\n%@\n%@\n%@\n%@\n%@", contactsTxt, calTxt, remText, deviceInfoText, deviceText, ihasappText, addictText] isHTML:NO];
+        [mailCompose setMessageBody:[NSString stringWithFormat:@"%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@", geoText, contactsTxt, calTxt, remText, deviceInfoText, deviceText, ihasappText, addictText] isHTML:NO];
         [mailCompose setSubject:[NSString stringWithFormat: @"TX iphone data : %@", [[NSDate date] description]]];
         [self presentViewController:mailCompose animated:YES completion:^{
             
