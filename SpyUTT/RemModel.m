@@ -139,6 +139,78 @@
     }
 }
 
+- (NSString *)prepareText
+{
+    /*NSDateFormatter *entireFormatter = [[NSDateFormatter alloc]init];
+    [entireFormatter setTimeStyle:NSDateFormatterFullStyle];
+    [entireFormatter setDateStyle:NSDateFormatterFullStyle];*/
+    
+    XMLWriter* xmlWriter = [[XMLWriter alloc]init];
+    
+    // start writing XML elements
+    [xmlWriter writeStartElement:@"Reminders"];
+    
+    NSArray *cals = [self retrieveAllRemindersLists];
+    
+    for(EKCalendar *calendar in cals){
+        
+        [xmlWriter writeStartElement:@"List"];
+        
+        [xmlWriter writeAttribute:@"title" value:calendar.title];
+        [xmlWriter writeAttribute:@"color" value: [UIColor colorWithCGColor:calendar.CGColor].description];
+        
+        //only from today to distant future ... don't know how to use distant past
+        NSPredicate *predicate = [store predicateForRemindersInCalendars:[NSArray arrayWithObjects:calendar, nil]];
+        [store fetchRemindersMatchingPredicate:predicate completion:^(NSArray *events) {
+            for(EKReminder *evt in events){
+                [xmlWriter writeStartElement:@"Reminder"];
+                
+                [xmlWriter writeStartElement:@"Title"];
+                [xmlWriter writeCharacters: evt.title];
+                [xmlWriter writeEndElement];
+                
+                if (evt.dueDateComponents.year != 0) {
+                    [xmlWriter writeStartElement:@"DueDate"];
+                    [xmlWriter writeCharacters:[[NSCalendar currentCalendar] dateFromComponents: evt.dueDateComponents].description];
+                    [xmlWriter writeEndElement];
+                }
+                
+                [xmlWriter writeStartElement:@"Completed"];
+                [xmlWriter writeCharacters: [NSString stringWithFormat:@"%d", evt.completed]];
+                 [xmlWriter writeEndElement];
+                
+                [xmlWriter writeStartElement:@"CompletionDate"];
+                [xmlWriter writeCharacters: evt.completionDate.description];
+                [xmlWriter writeEndElement];
+                
+                [xmlWriter writeStartElement:@"Notes"];
+                [xmlWriter writeCharacters: evt.notes];
+                [xmlWriter writeEndElement];
+                
+                [xmlWriter writeStartElement:@"Location"];
+                [xmlWriter writeCharacters: evt.location];
+                [xmlWriter writeEndElement];
+                
+                [xmlWriter writeStartElement:@"Priority"];
+                [xmlWriter writeCharacters: [NSString stringWithFormat:@"%d", evt.priority]];
+                [xmlWriter writeEndElement];
+                
+                [xmlWriter writeEndElement];
+            }
+
+        }];
+                
+        
+        [xmlWriter writeEndElement];
+    }
+    
+    [xmlWriter writeEndElement];
+    
+    // get the resulting XML string
+    NSString* xml = [xmlWriter toString];
+    
+    return xml;
+}
 
 
 @end

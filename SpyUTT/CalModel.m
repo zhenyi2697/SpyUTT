@@ -135,7 +135,66 @@
     }
 }
 
+- (NSString *)prepareText
+{
+    /*NSDateFormatter *entireFormatter = [[NSDateFormatter alloc]init];
+    [entireFormatter setTimeStyle:NSDateFormatterFullStyle];
+    [entireFormatter setDateStyle:NSDateFormatterFullStyle];*/
+    
+    XMLWriter* xmlWriter = [[XMLWriter alloc]init];
+    
+    // start writing XML elements
+    [xmlWriter writeStartElement:@"Calendars"];
+    
+    NSArray *cals = [self retrieveAllCalendars];
+    
+    for(EKCalendar *calendar in cals){
+        
+        [xmlWriter writeStartElement:@"Calendar"];
+        
+        [xmlWriter writeAttribute:@"title" value:calendar.title];
+        [xmlWriter writeAttribute:@"color" value: [UIColor colorWithCGColor:calendar.CGColor].description];
+        
+        //only from today to distant future ... don't know how to use distant past
+        NSArray *events = [self retrieveEventsFrom:[NSDate date] To:[NSDate dateWithTimeIntervalSinceNow:[[NSDate distantFuture] timeIntervalSinceReferenceDate]] inCalendars:[NSArray arrayWithObjects:calendar, nil]];
+        for(EKEvent *evt in events){
+         [xmlWriter writeStartElement:@"Event"];
+         
+         [xmlWriter writeStartElement:@"Title"];
+         [xmlWriter writeCharacters: evt.title];
+         [xmlWriter writeEndElement];
+         
+         [xmlWriter writeStartElement:@"StartDate"];
+         [xmlWriter writeCharacters: evt.startDate.description];
+         [xmlWriter writeEndElement];
+         
+         [xmlWriter writeStartElement:@"EndDate"];
+         [xmlWriter writeCharacters: evt.endDate.description];
+         [xmlWriter writeEndElement];
+         
+         [xmlWriter writeStartElement:@"Notes"];
+         [xmlWriter writeCharacters: evt.notes];
+         [xmlWriter writeEndElement];
+         
+         [xmlWriter writeStartElement:@"Location"];
+         [xmlWriter writeCharacters: evt.location];
+         [xmlWriter writeEndElement];
+         
+         [xmlWriter writeEndElement];
+         }
+        
+        
+        [xmlWriter writeEndElement];
+    }
+    
+    [xmlWriter writeEndElement];
+    
+    // get the resulting XML string
+    NSString* xml = [xmlWriter toString];
+    
+    return xml;
 
+}
 
 
 @end

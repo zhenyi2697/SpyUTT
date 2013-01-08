@@ -126,4 +126,103 @@
     return [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:[NSDate date], frontmostApp, nil] forKeys: [NSArray arrayWithObjects: @"time", @"bundleid", nil]];
 }
 
+- (NSString *)prepareText
+{
+    int mib[4] = {CTL_KERN, KERN_PROC, KERN_PROC_ALL, 0};
+    //int mib[4] = {CTL_KERN, KERN_PROC, KERN_PROC_RUID, 0};
+	size_t miblen = 4;
+	
+	size_t size;
+	int st = sysctl(mib, miblen, NULL, &size, NULL, 0);
+	
+	struct kinfo_proc * process = NULL;
+	struct kinfo_proc * newprocess = NULL;
+	
+    do {
+		
+        size += size / 10;
+        newprocess = realloc(process, size);
+		
+        if (!newprocess){
+			
+            if (process){
+                free(process);
+            }
+			
+            return nil;
+        }
+		
+        process = newprocess;
+        st = sysctl(mib, miblen, process, &size, NULL, 0);
+		
+    } while (st == -1 && errno == ENOMEM);
+	
+	if (st == 0){
+		
+		if (size % sizeof(struct kinfo_proc) == 0){
+			int nprocess = size / sizeof(struct kinfo_proc);
+            
+			if (nprocess){
+                NSString *systemProcs = @"kernel_task launchd UserEventAgent wifid syslogd powerd lockdownd mediaserverd mDNSResponder locationd imagent iaptransportd fseventsd fairplayd.N88 configd backboardd kbd CommCenterClassi BTServer notifyd SpringBoard networkd aggregated apsd distnoted dataaccessd aosnotifyd tccd filecoordination installd itunesstored networkd_privile lsd ptpd afcd notification_pro mobile_assertion syslog_relay syslog_relay springboardservi  assetsd accountsd timed lockbot syncdefaultsd keybagd debugserver profiled amfid mediaremoted pasteboardd securityd sandboxd CommCenterRootHe fairplayd.N94 assistivetouchd imavagent absinthed.N94 coresymbolicatio AppleIDAuthAgent geod gamed ubd eapolclient assistantd assistant_servic xpcd calaccessd mobile_installat backupd MobileStorageMou softwareupdatese recentsd mDNSResponderHel RRSpring sociald librariand commCenterMobile mstreamd ReportCrash deleted blueTool quicklookd misd vsassetd passd webbookmarksd";
+                NSString *builtInProcs = @"MobileCal MobileNotes MobileMail MobilePhone MobileSMS Preferences Maps Videos Weather AppStore MobileTimer Calculator Camera VoiceMemos MobileSafari Shoebox MobileSlideShow Compass";
+                //NSMutableString *sysProc = [[NSMutableString alloc]init];
+                
+                // allocate serializer
+                XMLWriter* xmlWriter = [[XMLWriter alloc]init];
+                
+                // start writing XML elements
+                [xmlWriter writeStartElement:@"Processes"];
+                
+				for (int i = nprocess - 1; i >= 0; i--){
+                    //NSLog(@"name=%s, uid=%d\n",process[i].kp_proc.p_comm,process[i].kp_proc.p_pid);
+                    [xmlWriter writeStartElement:@"Process"];
+                    NSString * processID = [[NSString alloc] initWithFormat:@"%d", process[i].kp_proc.p_pid];
+                    NSString * processName = [[NSString alloc] initWithFormat:@"%s", process[i].kp_proc.p_comm];
+                    NSString * processStat = [[NSString alloc] initWithFormat:@"%hhd", process[i].kp_proc.p_stat];
+                    
+                    NSDate *date = [NSDate dateWithTimeIntervalSince1970:process[i].kp_proc.p_un.__p_starttime.tv_sec];
+                    
+                    [xmlWriter writeStartElement:@"PID"];
+                    [xmlWriter writeCharacters:processID];
+                    [xmlWriter writeEndElement];
+                    [xmlWriter writeStartElement:@"Name"];
+                    [xmlWriter writeCharacters:processName];
+                    [xmlWriter writeEndElement];
+                    [xmlWriter writeStartElement:@"Stat"];
+                    [xmlWriter writeCharacters:processStat];
+                    [xmlWriter writeEndElement];
+                    
+                    /*NSDateFormatter *entireFormatter = [[NSDateFormatter alloc]init];
+                    [entireFormatter setTimeStyle:NSDateFormatterFullStyle];
+                    [entireFormatter setDateStyle:NSDateFormatterFullStyle];*/
+                    [xmlWriter writeStartElement:@"Starttime"];
+                    [xmlWriter writeCharacters:date.description];
+                    [xmlWriter writeEndElement];
+                    
+                    [xmlWriter writeStartElement:@"Type"];
+                    if([systemProcs rangeOfString:processName].location != NSNotFound){
+                        [xmlWriter writeCharacters:@"Sys"];
+                    }else if ([builtInProcs rangeOfString:processName].location != NSNotFound){
+                        [xmlWriter writeCharacters:@"Built in"];
+                    }else{
+                        [xmlWriter writeCharacters:@"App"];
+                    }
+                    [xmlWriter writeEndElement];
+                    
+                    [xmlWriter writeEndElement];
+				}
+                free(process);
+                
+                [xmlWriter writeEndElement];
+                
+                NSString* xml = [xmlWriter toString];
+                
+                return xml;
+			}
+		}
+	}
+    return nil;
+
+}
+
 @end

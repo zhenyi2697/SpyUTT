@@ -98,4 +98,5 @@
                              withSuccess:(void (^)(NSArray *appDictionaries))successBlock
                              withFailure:(void (^)(NSError *error))failureBlock;
 
+
 @end

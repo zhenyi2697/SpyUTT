@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMLWriter.h"
 
 @interface SDDeviceInfoTableViewController : UITableViewController
 - (IBAction)toggleSensor:(UIBarButtonItem *)sender;
+- (NSString *)prepareText;
 @end

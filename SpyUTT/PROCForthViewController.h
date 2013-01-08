@@ -10,8 +10,10 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface PROCForthViewController : UITableViewController <CLLocationManagerDelegate>
+@interface PROCForthViewController : UITableViewController <CLLocationManagerDelegate, UIActionSheetDelegate>
 
 @property(strong,nonatomic) NSDictionary *result;
+- (IBAction)showActionSheet:(id)sender;
+//- (IBAction)clear:(id)sender;
 
 @end
