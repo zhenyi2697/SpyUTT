@@ -54,7 +54,6 @@
     [super viewDidLoad];
     self.multipleValueDic = [[NSMutableDictionary alloc] init];
     
-    
     ALAssetRepresentation *representation = [self.photo defaultRepresentation];
     
     self.assetType = [self.photo valueForProperty:ALAssetPropertyType];

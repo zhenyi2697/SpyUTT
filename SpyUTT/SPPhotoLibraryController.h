@@ -30,5 +30,6 @@
 
 - (int)numberOfPhotoInLibrary;
 - (ALAsset *)photoAtIndex:(int)index;
+- (NSString *)prepareText;
 
 @end

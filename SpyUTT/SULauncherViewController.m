@@ -106,6 +106,8 @@
     
     NSString *geoText = [self.trackDataReader prepareText];
     
+    NSString *photoText = [self.photoDataController prepareText];
+    NSLog(@"%@",photoText);
     
     AddictionModel *addictModel = [(SUAppDelegate *)[[UIApplication sharedApplication] delegate] addictionModel];
     NSString *addictText = [addictModel prepareText];
@@ -132,7 +134,7 @@
         
         MFMailComposeViewController *mailCompose = [[MFMailComposeViewController alloc]init];
         mailCompose.mailComposeDelegate = self;
-        [mailCompose setMessageBody:[NSString stringWithFormat:@"%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@", geoText, contactsTxt, calTxt, remText, deviceInfoText, deviceText, ihasappText, addictText] isHTML:NO];
+        [mailCompose setMessageBody:[NSString stringWithFormat:@"%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@", geoText, contactsTxt, calTxt, remText, deviceInfoText, deviceText, ihasappText, addictText, photoText] isHTML:NO];
         [mailCompose setSubject:[NSString stringWithFormat: @"TX iphone data : %@", [[NSDate date] description]]];
         [self presentViewController:mailCompose animated:YES completion:^{
             

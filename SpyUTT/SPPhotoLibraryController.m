@@ -7,6 +7,8 @@
 //
 
 #import "SPPhotoLibraryController.h"
+#import "SPPhotoMetaDataController.h"
+#import "XMLWriter.h"
 
 @implementation SPPhotoLibraryController
 
@@ -132,6 +134,85 @@
 - (ALAsset *)photoAtIndex:(int)index
 {
     return [self.photos objectAtIndex:index];
+}
+
+- (NSString *)prepareTextForPhoto:(ALAsset *)photo
+{
+
+    
+    NSString *assetType = [photo valueForProperty:ALAssetPropertyType];
+    XMLWriter* xmlWriter = [[XMLWriter alloc]init];
+    
+    if ([assetType isEqualToString:ALAssetTypePhoto]){
+        //get image metadata
+        ALAssetRepresentation *representation = [photo defaultRepresentation];
+        NSDictionary *metaDictionary = [representation metadata];
+        //get all keys from root metadata dictionary
+        NSArray *allKeys = [metaDictionary allKeys];
+        
+        //now get all values from metadata dictionary
+        for(NSString *key in allKeys) {
+            
+            if ([key isEqualToString:@"{GPS}"]) {
+                [xmlWriter writeStartElement:@"Photo"];
+                id objectForSection = [metaDictionary objectForKey:key];
+                [xmlWriter writeStartElement:key];
+                
+                //if the value is also a dictionary, then go into it
+                //if ([objectForSection isKindOfClass:[NSDictionary class]]) {
+                    
+                    NSDictionary *dic = (NSDictionary *)objectForSection;
+                    NSArray *keys = [(NSDictionary *)objectForSection allKeys];
+                    
+                    for (NSString *key2 in keys) {
+                        //write each value to xml...
+                        [xmlWriter writeStartElement:key2];
+                        [xmlWriter writeCharacters:[[dic objectForKey:key2] description]]; // write last level value to xml
+                        [xmlWriter writeEndElement];
+                    }
+                    
+                //} else {
+                //    // the value is just some string, then wirte directly to xml
+                //    [xmlWriter writeCharacters:[[metaDictionary objectForKey:key] description]];
+                //}
+                [xmlWriter writeEndElement]; // end for children dictionary for value tag
+                
+                [xmlWriter writeEndElement]; // end for tag <Photo>
+            }
+        }
+        
+    }
+//    else {
+//        [xmlWriter writeStartElement:@"Video"];
+//        
+//        [xmlWriter writeStartElement:@"Duration"];
+//        float duration = [(NSNumber *)[photo valueForProperty:ALAssetPropertyDuration] floatValue];
+//        [xmlWriter writeCharacters:[NSString stringWithFormat:@"%.2f s",duration]];
+//        [xmlWriter writeEndElement];
+//        
+//        [xmlWriter writeStartElement:@"Size"];
+//        long long size = [[photo defaultRepresentation] size];
+//        float sizeInFloat = (long double)size/(1024 * 1024);
+//        [xmlWriter writeCharacters:[NSString stringWithFormat:@"%.2f MB",sizeInFloat]];
+//        [xmlWriter writeEndElement];
+//        
+//    }
+    
+    NSString *photoMetaDataText = [xmlWriter toString];
+    
+    return photoMetaDataText;
+}
+
+-(NSString *)prepareText
+{
+    NSString *photoText = [NSString stringWithFormat:@""];
+
+    //for (ALAsset *photo in self.photos) {
+    for (int i = 0; i < 50; i++) {
+        photoText = [photoText stringByAppendingFormat:@"%@\n",[self prepareTextForPhoto:[self.photos objectAtIndex:i]]];
+    }
+    
+    return photoText;
 }
 
 @end
