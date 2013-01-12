@@ -51,7 +51,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self showProgressAlertView];
+    if (!self.photoLibraryController.allPhotosAreLoaded) {
+        [self showProgressAlertView];
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -22,6 +22,8 @@
 
 @property (nonatomic, strong) NSArray *photos;
 @property (nonatomic,strong) NSDictionary *photoGPSInfoDic;
+@property (nonatomic) BOOL allPhotosAreLoaded;
+
 @property (nonatomic,strong) id delegate;
 
 + (ALAssetsLibrary *)defaultAssetsLibrary;

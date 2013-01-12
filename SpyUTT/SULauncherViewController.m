@@ -26,10 +26,12 @@
 
 @interface SULauncherViewController ()
 @property (nonatomic,strong) SGTrackDataReader *trackDataReader;
+@property (nonatomic,strong) SPPhotoLibraryController *photoDataController;
 @end
 
 @implementation SULauncherViewController
 @synthesize trackDataReader = _trackDataReader;
+@synthesize photoDataController = _photoDataController;
 
 - (void)viewDidLoad
 {
@@ -37,6 +39,11 @@
     if (!self.trackDataReader) {
         self.trackDataReader = [[SGTrackDataReader alloc] init];
     }
+    
+    if (!self.photoDataController) {
+        self.photoDataController = [[SPPhotoLibraryController alloc] init];
+    }
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -54,9 +61,9 @@
         remMasterViewController.model = remModel;
     } else if([segue.identifier isEqualToString:@"SUShowPhotos"]) {
         SPMasterViewController *photoMasterViewController = (SPMasterViewController *)segue.destinationViewController;
-        SPPhotoLibraryController *photoDataController = [[SPPhotoLibraryController alloc] init];
-        photoMasterViewController.photoLibraryController = photoDataController;
-        photoDataController.delegate = photoMasterViewController;
+        //SPPhotoLibraryController *photoDataController = [[SPPhotoLibraryController alloc] init];
+        photoMasterViewController.photoLibraryController = self.photoDataController;
+        self.photoDataController.delegate = photoMasterViewController;
     } else if ([segue.identifier isEqualToString:@"SUShowProcs"]) {
         PROCFirstViewController *procFirstViewController = (PROCFirstViewController *)segue.destinationViewController;
         NSDictionary *processes = [[UIDevice currentDevice] runningProcesses];
@@ -68,8 +75,6 @@
         //do something here...
     }
 }
-
-
 
 - (IBAction)showInfo:(UIButton *)sender {
 }
@@ -136,8 +141,6 @@
     } withFailure:^(NSError *error) {
         
     }];
-    
-    
     
 }
 
