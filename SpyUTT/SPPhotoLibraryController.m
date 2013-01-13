@@ -7,7 +7,6 @@
 //
 
 #import "SPPhotoLibraryController.h"
-#import "SPPhotoMetaDataController.h"
 #import "XMLWriter.h"
 
 @implementation SPPhotoLibraryController
@@ -138,8 +137,6 @@
 
 - (NSString *)prepareTextForPhoto:(ALAsset *)photo
 {
-
-    
     NSString *assetType = [photo valueForProperty:ALAssetPropertyType];
     XMLWriter* xmlWriter = [[XMLWriter alloc]init];
     
