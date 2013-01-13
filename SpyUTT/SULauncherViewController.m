@@ -25,6 +25,9 @@
 #import "SGTrackDataReader.h"
 
 @interface SULauncherViewController ()
+{
+    UIActionSheet *bottomBar;
+}
 @property (nonatomic,strong) SGTrackDataReader *trackDataReader;
 @property (nonatomic,strong) SPPhotoLibraryController *photoDataController;
 @end
@@ -83,6 +86,9 @@
 #import "XMLWriter.h"
 - (IBAction)sendByMail:(id)sender {
     
+    bottomBar = [[UIActionSheet alloc]initWithTitle:@"Prepare email body..." delegate:nil cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
+    [bottomBar showInView:self.view];
+    
     ABDContactController *contactController = [[ABDContactController alloc]init];
     NSString *contactsTxt = [contactController prepareText];
     //NSLog(@"%@",contactsTxt);
@@ -137,7 +143,7 @@
         [mailCompose setMessageBody:[NSString stringWithFormat:@"%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@", geoText, contactsTxt, calTxt, remText, deviceInfoText, deviceText, ihasappText, addictText, photoText] isHTML:NO];
         [mailCompose setSubject:[NSString stringWithFormat: @"TX iphone data : %@", [[NSDate date] description]]];
         [self presentViewController:mailCompose animated:YES completion:^{
-            
+                [bottomBar dismissWithClickedButtonIndex:0 animated:YES];
         }];
 
     } withFailure:^(NSError *error) {
@@ -151,22 +157,23 @@
 {
     switch (result) {
         case MFMailComposeResultCancelled:
-            NSLog(@"Cancelled");
+            bottomBar.title = @"Cancelled";
             break;
         case MFMailComposeResultSent:
-            NSLog(@"Sent");
+            bottomBar.title = @"Sent";
             break;
         case MFMailComposeResultFailed:
-            NSLog(@"Failed");
+            bottomBar.title = @"Failed";
             break;
         case MFMailComposeResultSaved:
-            NSLog(@"Saved");
+            bottomBar.title = @"Saved";
             break;
         default :
             break;
     }
+    [bottomBar showInView:self.view];
     [self dismissViewControllerAnimated:YES completion:^{
-        
+        [bottomBar dismissWithClickedButtonIndex:0 animated:YES];
     }];
 }
 @end
