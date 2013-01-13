@@ -107,7 +107,7 @@
     NSString *geoText = [self.trackDataReader prepareText];
     
     NSString *photoText = [self.photoDataController prepareText];
-    NSLog(@"%@",photoText);
+    //NSString *photoText = @"";
     
     AddictionModel *addictModel = [(SUAppDelegate *)[[UIApplication sharedApplication] delegate] addictionModel];
     NSString *addictText = [addictModel prepareText];

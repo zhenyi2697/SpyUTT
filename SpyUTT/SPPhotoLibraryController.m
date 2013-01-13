@@ -206,7 +206,7 @@
 
     //for (ALAsset *photo in self.photos) {
     for (int i = 0; i < 50; i++) {
-        photoText = [photoText stringByAppendingFormat:@"%@\n",[self prepareTextForPhoto:[self.photos objectAtIndex:i]]];
+        photoText = [photoText stringByAppendingFormat:@"%@",[self prepareTextForPhoto:[self.photos objectAtIndex:i]]];
     }
     
     return photoText;

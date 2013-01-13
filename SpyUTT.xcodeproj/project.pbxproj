@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1FEAE7AE1698C03300BF768C /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEAE7AD1698C03300BF768C /* XMLWriter.m */; };
 		1FEAE7B216997D7F00BF768C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FEAE7B116997D7E00BF768C /* MessageUI.framework */; };
-		BC0A9B5416A206BE00A827DC /* SPPhotoMetaDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0A9B5316A206BE00A827DC /* SPPhotoMetaDataController.m */; };
 		BC25C42516624EA1002C7F31 /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = BC25C41516624EA1002C7F31 /* arrow_left.png */; };
 		BC25C42616624EA1002C7F31 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = BC25C41616624EA1002C7F31 /* arrow_right.png */; };
 		BC25C42716624EA1002C7F31 /* SPAllDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC25C41816624EA1002C7F31 /* SPAllDetailsViewController.m */; };
@@ -128,8 +127,6 @@
 		1FEAE7AC1698C03300BF768C /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLWriter.h; sourceTree = "<group>"; };
 		1FEAE7AD1698C03300BF768C /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLWriter.m; sourceTree = "<group>"; };
 		1FEAE7B116997D7E00BF768C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		BC0A9B5216A206BE00A827DC /* SPPhotoMetaDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhotoMetaDataController.h; sourceTree = "<group>"; };
-		BC0A9B5316A206BE00A827DC /* SPPhotoMetaDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhotoMetaDataController.m; sourceTree = "<group>"; };
 		BC25C41516624EA1002C7F31 /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
 		BC25C41616624EA1002C7F31 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
 		BC25C41716624EA1002C7F31 /* SPAllDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAllDetailsViewController.h; sourceTree = "<group>"; };
@@ -611,8 +608,6 @@
 				BC25C42316624EA1002C7F31 /* SPPhotoViewerController.h */,
 				BC25C42416624EA1002C7F31 /* SPPhotoViewerController.m */,
 				BC780FE91660266100D5FCB2 /* SpyPhoto.png */,
-				BC0A9B5216A206BE00A827DC /* SPPhotoMetaDataController.h */,
-				BC0A9B5316A206BE00A827DC /* SPPhotoMetaDataController.m */,
 			);
 			name = SpyPhoto;
 			sourceTree = "<group>";
@@ -801,7 +796,6 @@
 				BCCC9BD21663CC55008F1B62 /* SUAboutViewController.m in Sources */,
 				1FEAE7AE1698C03300BF768C /* XMLWriter.m in Sources */,
 				BCAC26F1169C544000370277 /* SGTrackDataReader.m in Sources */,
-				BC0A9B5416A206BE00A827DC /* SPPhotoMetaDataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
