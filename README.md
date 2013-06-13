@@ -35,6 +35,6 @@ For more details, please visit [this report](https://dl.dropboxusercontent.com/u
 
 ## About
 
-Project TX 2012 UTT. Understand the guide of M. Marc Lemercier.   
+Project TX 2012 UTT. Under the guide of M. Marc Lemercier.   
 License MIT   
 @copyright Z&z
